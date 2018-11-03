@@ -1,0 +1,7 @@
+--Before running the script: my_script.sh, add a file, folder or system call to watch list.
+
+--After there has been enough monitoring, call: bash my_script.sh.
+
+  It will produce an output file, myfileout, which is the appropriate style file.
+
+--Open myfileout and take a look at the statistics.
