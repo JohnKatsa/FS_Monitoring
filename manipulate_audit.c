@@ -42,11 +42,22 @@ int hex_to_dec(char* hexVal){
   return dec_val;
 }
 
-int write_result(char* syscall_num, char* filename, char* a0, char* a1,
-  char* a2, char* a3, FILE* fsout){
+int write_result(char* syscall_num, char* filename, char* folder_of_interest,
+   char* a0, char* a1, char* a2, char* a3, FILE* fsout){
 
-  //early prunning (if number, thus no name (and no action made) or null)
+  // early prunning (if number, thus no name (and no action made) or null)
   if((filename == NULL) || ((filename[0] >= 48) && (filename[0] <= 57)))
+    return 0;
+
+  // check if file/folder is in folder of interest
+  int filenamel = strlen(filename);
+  int folderl = strlen(folder_of_interest);
+  //FILE* f = fopen("test", "a");
+  //fprintf(f,"filename = %s with len = %d, folder = %s with len = %d\n", filename, filenamel, folder_of_interest, folderl);
+  //fclose(f);
+  if(filenamel < folderl)
+    return 0;
+  if(strncmp(filename,folder_of_interest,folderl))
     return 0;
 
   // get real number
@@ -95,6 +106,7 @@ int main(int argc, char** argv)
 
   char* input = argv[1];
   char* output = argv[2];
+  char* folder_of_interest = argv[3];
 
   FILE* fs = fopen(input, "r");
   FILE* fsout = fopen(output, "w+");
@@ -121,21 +133,41 @@ int main(int argc, char** argv)
       //search for arguments
       char* temp;
 
+      // in some system calls proctitle keeps file path
       if(((temp = strstr(token,"proctitle")) != NULL)){
         token = strtok(NULL, delimeters);
-        proctitle = malloc(strlen(token)+1);
-        memcpy(proctitle,token,strlen(token)+1);
-        if(strlen(proctitle)-1 >= 1)
-          proctitle[strlen(proctitle)-1] = '\0';
+        //check if we have ""
+        if(token[0] == 34){
+          proctitle = malloc(strlen(token)+1-2);
+          memcpy(proctitle,&token[1],strlen(token)-1);
+          if(strlen(proctitle)-1 >= 1)
+            proctitle[strlen(proctitle)-1] = '\0';
+        }
+        else{
+          proctitle = malloc(strlen(token)+1);
+          memcpy(proctitle,token,strlen(token));
+          if(strlen(proctitle)-1 >= 1)
+            proctitle[strlen(proctitle)-1] = '\0';
+        }
       }
       // find what is the filename
       if(((temp = strstr(token,"name")) != NULL) && !flag){
         token = strtok(NULL, delimeters);
-        filename = malloc(strlen(token)+1);
-        memcpy(filename,token,strlen(token)+1);
-        if(strlen(filename)-1 >= 1)
-          filename[strlen(filename)-1] = '\0';
-        flag = 1;
+        //check if we have ""
+        if(token[0] == 34){
+          filename = malloc(strlen(token)+1-2);
+          memcpy(filename,&token[1],strlen(token)-1);
+          if(strlen(filename)-1 >= 1)
+            filename[strlen(filename)-1] = '\0';
+          flag = 1;
+        }
+        else{
+          filename = malloc(strlen(token)+1);
+          memcpy(filename,token,strlen(token));
+          if(strlen(filename)-1 >= 1)
+            filename[strlen(filename)-1] = '\0';
+          flag = 1;
+        }
       }
       // find which syscall is
       if((temp = strstr(token,"syscall")) != NULL){
@@ -166,7 +198,7 @@ int main(int argc, char** argv)
           filename = proctitle;
           proctitle = NULL;
         }
-        write_result(syscall_num,filename,a0,a1,a2,a3,fsout);
+        write_result(syscall_num,filename,folder_of_interest,a0,a1,a2,a3,fsout);
         if(filename != NULL)
           free(filename);
         if(proctitle != NULL)
