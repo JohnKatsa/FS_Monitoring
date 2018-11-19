@@ -10,21 +10,18 @@ def read_write_args(data,sys_id,fh_to_fn_and_p,time):
 
     name = ""
     # write the results to map
-    for x in fh_to_fn_and_p:
-        # found record in map
-        if x[0] == pid and x[1] == fh:
-            pos = x[3]
-            x[3] += bytes_num
-            name = x[2]
-
+    if name:
+        name, pos = fh_to_fn_and_p[(pid,fh)]
+        fh_to_fn_and_p[(pid,fh)] = [name,pos+bytes_num]
 
     if sys_id == 0 and name: # read
-        print time, "\t", "READ\t", name, "\t", pos, "\t", bytes_num, pid
+        print (time, "\t", "READ\t", name, "\t", pos, "\t", bytes_num, pid)
     elif sys_id == 1 and name:   # write
-        print time, "\t", "WRITE\t", name, "\t", pos, "\t", bytes_num, pid
+        print (time, "\t", "WRITE\t", name, "\t", pos, "\t", bytes_num, pid)
 
 """function to determine open arguments"""
 def open_args(data,fh_to_fn_and_p,time):
+    name = ""
     for token in data:
         if "pid=" in token:
             pid = token.split("=")[1]  # take second arg (collision with ppid, but pid is second so it keeps correct value)
@@ -32,14 +29,16 @@ def open_args(data,fh_to_fn_and_p,time):
             name = token.split("=")[1]
         elif "exit=" in token:
             fh = token.split("=")[1]
+        elif "success=" in token:
+            success = token.split("=")[1]
+
+    if success == "no" or name == "":
+        return
 
     # check if same pid with same fh does it more than once
-    for x in fh_to_fn_and_p:
-        if x[0] == pid and x[1] == fh:
-            return
-    fh_to_fn_and_p.append([pid,fh,name,0])
+    fh_to_fn_and_p[(pid,fh)] = [name,0]
 
-    print time, "\t", "OPEN\t", name, pid, fh
+    print (time, "\t", "OPEN\t", name, pid, fh)
 
 """function to determine close arguments"""
 def close_args(data,fh_to_fn_and_p,time):
@@ -50,11 +49,8 @@ def close_args(data,fh_to_fn_and_p,time):
             fh = token.split("=")[1]
 
     #search for pid
-    for p in fh_to_fn_and_p:
-        #found it
-        if p[0] == pid and p[1] == fh:
-            print time, "\t", "CLOSE\t", p[2], pid
-            fh_to_fn_and_p.remove(p)
+    if (pid,fh) in fh_to_fn_and_p:
+        del fh_to_fn_and_p[(pid,fh)]
 
 """function to determine lseek arguments"""
 def lseek_args(data,fh_to_fn_and_p,time):
@@ -66,9 +62,9 @@ def lseek_args(data,fh_to_fn_and_p,time):
         elif "a1=" in token:
             offset = token.split("=")[1]
 
-    for x in fh_to_fn_and_p:
-        if x[0] == pid and x[1] == fh:
-            x[3] += offset
+    if (pid,fh) in fh_to_fn_and_p:
+        [name, pos] = fh_to_fn_and_p[(pid,fh)]
+        fh_to_fn_and_p[(pid,fh)] = [name,pos+bytes_num]
 
 """function to determine dup/dup2/dup3 arguments"""
 def dup_args(data,fh_to_fn_and_p,time):
@@ -79,15 +75,11 @@ def dup_args(data,fh_to_fn_and_p,time):
             oldfh = token.split("=")[1]
         elif "exit=" in token:
             newfh = token.split("=")[1]
-
-    success = 0
-    for x in fh_to_fn_and_p:
-        if x[0] == pid and x[1] == oldfh:
-            temp = x[:]
-            success = 1
+        elif "success=" in token:
+            success = token.split("=")[1]
 
     if success:
-        fh_to_fn_and_p.append(temp)
+        fh_to_fn_and_p[(pid,newfh)] = fh_to_fn_and_p.get((pid,oldfh))
 
 """function to determine fork/clone/vfork arguments"""
 def fork_args(data,fh_to_fn_and_p,time):
@@ -96,12 +88,13 @@ def fork_args(data,fh_to_fn_and_p,time):
             ppid = token.split("=")[1]
         elif "pid=" in token:
             pid = token.split("=")[1]
+        elif "success=" in token:
+            success = token.split("=")[1]
 
-    temp = []
-    for x in fh_to_fn_and_p:
-        if x[0] == ppid:
-            temp.append([pid,x[1],x[2],x[3]])
-    fh_to_fn_and_p.append(x for x in temp)
+    if success:
+        for key, value in fh_to_fn_and_p.items():
+            if key[0] == ppid:
+                fh_to_fn_and_p[(pid,key[1])] = fh_to_fn_and_p.get(key).copy()
 
 """function to determine pread/pwrite arguments"""
 def pread_pwrite_args(data,sys_id,fh_to_fn_and_p,time):
@@ -117,13 +110,11 @@ def pread_pwrite_args(data,sys_id,fh_to_fn_and_p,time):
 
     name = ""
     # write the results to map
-    for x in fh_to_fn_and_p:
-        # found record in map
-        if x[0] == pid and x[1] == fh:
-            name = x[2]
-
+    if name:
+        name, pos = fh_to_fn_and_p[(pid,fh)]
+        fh_to_fn_and_p[(pid,fh)] = [name,pos+bytes_num]
 
     if sys_id == 0 and name: # read
-        print time, "\t", "PREAD\t", name, "\t", pos, "\t", bytes_num, pid
+        print (time, "\t", "PREAD\t", name, "\t", pos, "\t", bytes_num, pid)
     elif sys_id == 1 and name:   # write
-        print time, "\t", "PWRITE\t", name, "\t", pos, "\t", bytes_num, pid
+        print (time, "\t", "PWRITE\t", name, "\t", pos, "\t", bytes_num, pid)
