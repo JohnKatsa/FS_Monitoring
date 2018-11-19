@@ -1,0 +1,568 @@
+DATE 	 OPERATION 	 FILENAME 	 POSITION 	 PROCESS_ID
+Tue Nov 13 01:01:03 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/63564C6CE40C34187A22827B69DD8BCBB9C0FCE5" 2658 189
+Tue Nov 13 01:01:05 2018  	OPEN	"/home/katsanis/.mozilla/firefox/nhp1iy1u.default/storage/default/http+++www.ethereumbuy.info/idb/" 2658 135
+Tue Nov 13 01:01:05 2018  	OPEN	"/proc/self/mountinfo" 2658 173
+Tue Nov 13 01:01:05 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/25ACD8AA29008773D2DA5C494D86DFEE7E25ED42" 2658 190
+Tue Nov 13 01:01:05 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/285153193E4A8E8130D80281E081B9662AC4D907" 2658 191
+Tue Nov 13 01:01:05 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/34893C4DAB1A0D5834C3FAACBA5FD49C9A0AC702" 2658 193
+Tue Nov 13 01:01:05 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/BE6F24E7EBE61E79E09ABE3D211017C6ABD791CC" 2658 198
+Tue Nov 13 01:01:06 2018  	OPEN	"/home/katsanis/.mozilla/firefox/nhp1iy1u.default/storage/default/https+++www.youtube.com/idb/" 2658 132
+Tue Nov 13 01:01:06 2018  	OPEN	"/home/katsanis/.mozilla/firefox/nhp1iy1u.default/storage/default/http+++tpc.googlesyndication.com/idb/" 2658 134
+Tue Nov 13 01:01:06 2018  	OPEN	"/home/katsanis/.mozilla/firefox/nhp1iy1u.default/storage/default/http+++tpc.googlesyndication.com/idb/" 2658 182
+Tue Nov 13 01:01:06 2018  	OPEN	"/proc/self/mountinfo" 2658 188
+Tue Nov 13 01:01:07 2018  	OPEN	"/home/katsanis/.mozilla/firefox/nhp1iy1u.default/storage/default/https+++e-radio.onesignal.com/idb/" 2658 113
+Tue Nov 13 01:01:07 2018  	OPEN	"/etc/hosts" 2658 154
+Tue Nov 13 01:01:07 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:01:07 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:01:07 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:01:07 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:01:07 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:01:07 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:01:07 2018  	READ	"/proc/stat" 	1024 	683 990
+Tue Nov 13 01:01:07 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:01:08 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/2AD2A92D5DEFBC8CACCFF808C317DC6701C38A44" 2658 112
+Tue Nov 13 01:01:08 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/3D533A959ED0FF00E2190209ECC00703A27DE20F" 2658 199
+Tue Nov 13 01:01:08 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/E8648C03E82589281C394AECB18C6B0944FFC1F3" 2658 200
+Tue Nov 13 01:01:08 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/2B924359CD83D6A2FE2880954E56496AE5A3E8D4" 2658 201
+Tue Nov 13 01:01:08 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/2140F2DC58756CD1F35BC1BD8DA790DF8E873C61" 2658 202
+Tue Nov 13 01:01:08 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/1AC000F53B698F5EA21411D31399B77C39F64108" 2658 203
+Tue Nov 13 01:01:08 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/677F58E425B9D60BF71127B311BAA9522FCECC15" 2658 204
+Tue Nov 13 01:01:08 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/91F3D2BE5CDB064A43F6702D0DB6BEC7C867F890" 2658 205
+Tue Nov 13 01:01:08 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/401766B27F4D8B64B0574378AAA72922DE8F4DE8" 2658 206
+Tue Nov 13 01:01:08 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/79107B9953C004DBCDB334F70ED18DF85D04BC7A" 2658 207
+Tue Nov 13 01:01:08 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/DB3C18D696E9507B97B3DF0703EA53A4606816C9" 2658 208
+Tue Nov 13 01:01:08 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/CC222946047039A0B8E62522B5B275E826CFBB67" 2658 209
+Tue Nov 13 01:01:08 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/845918606D949636BBCA0E926280E3E36511563C" 2658 210
+Tue Nov 13 01:01:08 2018  	OPEN	"/proc/self/mountinfo" 2658 211
+Tue Nov 13 01:01:10 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/54C02815DF649B5C5D5BC4076EED56FE97487B7F" 2658 127
+Tue Nov 13 01:01:10 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/DD4784ABBBC798AB4EB2CC2EFF56F69819B5B80A" 2658 212
+Tue Nov 13 01:01:10 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/1155DEF85200450525B040B3632C6CADD963E9B8" 2658 213
+Tue Nov 13 01:01:10 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/C0C52AC5176C8C6705DBF2BB39706D64BDEC656D" 2658 214
+Tue Nov 13 01:01:10 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/4E2750BB4C767F8BFA68A46E7DB8CE1A3C8D2D19" 2658 215
+Tue Nov 13 01:01:10 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/82FDAE066F69529CA84A787BE99AC0220FBDCA45" 2658 216
+Tue Nov 13 01:01:10 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/4FAE45B789CA5248F56AED4E5B1B5839FA4EC251" 2658 217
+Tue Nov 13 01:01:10 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/6BA5E0942B3C3CC6637BFF3BF98937AE6E5E207E" 2658 218
+Tue Nov 13 01:01:10 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/FD925FB799B4D472B5910FD4028F08C689341603" 2658 219
+Tue Nov 13 01:01:10 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/C03AC959858149A682D91210E265BC5A68DB423E" 2658 220
+Tue Nov 13 01:01:10 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/24B4B9C17CDBCF40A2B9EC4AA20C307E59018202" 2658 221
+Tue Nov 13 01:01:12 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/00C3C3FE4BB3CE1BBFE5646B1FEA2978A1CA4CCA" 2658 174
+Tue Nov 13 01:01:12 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/75F2DEC12802A0C5EDAE7AF154E1B448C0DCD1BF" 2658 185
+Tue Nov 13 01:01:12 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/1E073658ECBC6D4F4A4863A95DE3DF199BD26806" 2658 194
+Tue Nov 13 01:01:12 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/1A5CCD7018E8C7209EAE666EC2046F5A0043A82F" 2658 222
+Tue Nov 13 01:01:12 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/FA4CEF5D1B19FD7AF71F0A90D4E2B70A8AEC8C9B" 2658 223
+Tue Nov 13 01:01:12 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/A74AF2D0CBA271CCEC405BCADC96780ADACA3AC7" 2658 224
+Tue Nov 13 01:01:13 2018  	OPEN	"/etc/hosts" 2658 225
+Tue Nov 13 01:01:13 2018  	OPEN	"/etc/hosts" 2658 226
+Tue Nov 13 01:01:14 2018  	OPEN	"/etc/hosts" 2658 227
+Tue Nov 13 01:01:14 2018  	OPEN	"/dev/shm/" 2658 228
+Tue Nov 13 01:01:16 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/BB6537F24E72DE37F7BE29049C3B05FB9359443C" 2658 230
+Tue Nov 13 01:01:16 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/E8B4B9FA36594AE8D07FD26525835C7112507D0D" 2658 231
+Tue Nov 13 01:01:16 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/E64DDD690E096C31EEC5C24DD6DFAA4192664CB6" 2658 151
+Tue Nov 13 01:01:16 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/AA90AD0EA2A65EA894375DB7F7E9DB2E7606F973" 2658 196
+Tue Nov 13 01:01:17 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/0838A700008F9FD79A238D1736578057232023E8" 2658 229
+Tue Nov 13 01:01:17 2018  	OPEN	"/etc/hosts" 2658 232
+Tue Nov 13 01:01:20 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:01:20 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:01:20 2018  	READ	"/proc/stat" 	1024 	683 990
+Tue Nov 13 01:01:20 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:01:20 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/" 2658 168
+Tue Nov 13 01:01:20 2018  	OPEN	"/proc/self/mountinfo" 2658 183
+Tue Nov 13 01:01:20 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/5F413FC749AC38F7C1C13D94898F8A3822238BAF" 2658 184
+Tue Nov 13 01:01:21 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/F8B3775627348196E234A16AD68799DC0E801BE5" 2658 233
+Tue Nov 13 01:01:21 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/DB7712221E18D3FE95367F49AFDE6F92EE0BA27B" 2658 234
+Tue Nov 13 01:01:21 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/97205E41E66B2EBF299F61D9BD5BF4A288FB4152" 2658 235
+Tue Nov 13 01:01:21 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/BDE91E1C22CD4971676B71B2E0D9F60A5A3D2650" 2658 236
+Tue Nov 13 01:01:21 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/FC0D4954C8F25BD2D33811B457F825CF0E0FC0B2" 2658 237
+Tue Nov 13 01:01:21 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/3E354E588B153F6E796DB157573658417141CED2" 2658 238
+Tue Nov 13 01:01:21 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/9D2BB2152379CF2EE6DE99C1A3D9E414385EE64D" 2658 239
+Tue Nov 13 01:01:21 2018  	OPEN	"/var/lib/upower/" 1423 9
+Tue Nov 13 01:01:21 2018  	WRITE	"/var/lib/upower/" 	0 	175 1423
+Tue Nov 13 01:01:22 2018  	CLOSE	"/var/lib/upower/" 1423
+Tue Nov 13 01:01:22 2018  	OPEN	"/var/lib/upower/" 1423 9
+Tue Nov 13 01:01:22 2018  	WRITE	"/var/lib/upower/" 	0 	385 1423
+Tue Nov 13 01:01:22 2018  	CLOSE	"/var/lib/upower/" 1423
+Tue Nov 13 01:01:22 2018  	OPEN	"/var/lib/upower/" 1423 9
+Tue Nov 13 01:01:22 2018  	WRITE	"/var/lib/upower/" 	0 	175 1423
+Tue Nov 13 01:01:22 2018  	CLOSE	"/var/lib/upower/" 1423
+Tue Nov 13 01:01:22 2018  	OPEN	"/var/lib/upower/" 1423 9
+Tue Nov 13 01:01:22 2018  	WRITE	"/var/lib/upower/" 	0 	175 1423
+Tue Nov 13 01:01:22 2018  	CLOSE	"/var/lib/upower/" 1423
+Tue Nov 13 01:01:22 2018  	OPEN	"/var/lib/upower/" 1423 9
+Tue Nov 13 01:01:22 2018  	WRITE	"/var/lib/upower/" 	0 	175 1423
+Tue Nov 13 01:01:22 2018  	CLOSE	"/var/lib/upower/" 1423
+Tue Nov 13 01:01:22 2018  	OPEN	"/var/lib/upower/" 1423 9
+Tue Nov 13 01:01:22 2018  	WRITE	"/var/lib/upower/" 	0 	385 1423
+Tue Nov 13 01:01:22 2018  	CLOSE	"/var/lib/upower/" 1423
+Tue Nov 13 01:01:24 2018  	OPEN	"/var/lib/upower/" 1423 9
+Tue Nov 13 01:01:24 2018  	WRITE	"/var/lib/upower/" 	0 	175 1423
+Tue Nov 13 01:01:25 2018  	WRITE	"/var/lib/upower/" 	175 	175 1423
+Tue Nov 13 01:01:25 2018  	CLOSE	"/var/lib/upower/" 1423
+Tue Nov 13 01:01:29 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/F9AC12502FD4D1EB8943D50902F83DD2BD960624" 2658 142
+Tue Nov 13 01:01:29 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:01:29 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:01:29 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:01:29 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:01:29 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:01:29 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:01:29 2018  	READ	"/proc/stat" 	1024 	683 990
+Tue Nov 13 01:01:29 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:01:30 2018  	OPEN	"/dev/sda" 2318 12
+Tue Nov 13 01:01:30 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/5523C81082235FDCF112713D0225AE2223AC1DAC" 2658 161
+Tue Nov 13 01:01:32 2018  	OPEN	"/etc/udev/udev.conf" 2318 14
+Tue Nov 13 01:01:35 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/A0CF2ADF5823B7A0E922AF1AB4FF3CBC6E1B9F22" 2658 144
+Tue Nov 13 01:01:35 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/5E8A571C8D1EC260BCEA4097F9000EF25DCA8598" 2658 148
+Tue Nov 13 01:01:35 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/AC6248F5970F5A4FD3D158617D02AFA5B11F8D18" 2658 155
+Tue Nov 13 01:01:35 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/708BE13CCEFAFF8C947F0531DDD8A4100D90AA6E" 2658 159
+Tue Nov 13 01:01:35 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/00B51DE599AEF0300951E77C2DF67A85BA10BB53" 2658 160
+Tue Nov 13 01:01:35 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/99E9D8F3E2ED7FDCAB6801496A6BCEFB3374D576" 2658 162
+Tue Nov 13 01:01:35 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/9A1F556C47B0BE8D2D9D7EEF3383E396D46B0A8F" 2658 165
+Tue Nov 13 01:01:35 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/180A8A449CD9F5D120FE38A837E806554D87FF14" 2658 167
+Tue Nov 13 01:01:37 2018  	OPEN	"/proc/mounts" 2308 11
+Tue Nov 13 01:01:39 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:01:39 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:01:39 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:01:39 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:01:39 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:01:39 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:01:39 2018  	READ	"/proc/stat" 	1024 	683 990
+Tue Nov 13 01:01:39 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:01:45 2018  	OPEN	"/var/run/cups/certs/" 15151 19
+Tue Nov 13 01:01:49 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:01:49 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:01:49 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:01:49 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:01:49 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:01:49 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:01:49 2018  	READ	"/proc/stat" 	1024 	683 990
+Tue Nov 13 01:01:49 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:01:50 2018  	OPEN	"/etc/fstab" 2097 26
+Tue Nov 13 01:01:59 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:02:01 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/23C1B81740A9AB94FAA62533213677D8D137509E" 2658 166
+Tue Nov 13 01:02:01 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/D50B5C913D88858DFA194375B1C29BB380900DF3" 2658 169
+Tue Nov 13 01:02:01 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/A711FB59E746869082C78B9B4805E0EBF493D11D" 2658 170
+Tue Nov 13 01:02:01 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/D893924F38D81458B80695B5B861750C6FA78F5E" 2658 171
+Tue Nov 13 01:02:01 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/2D8AD9AA211D21025EF7088A8DD2001B57AF42E9" 2658 172
+Tue Nov 13 01:02:01 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/1D3866DBDC337B690628357F7BB81A5077065154" 2658 177
+Tue Nov 13 01:02:01 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/04CCA731F0F7C147D488DB4F7B0E39C3F5873B73" 2658 178
+Tue Nov 13 01:02:01 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/029B3D445FC13959A34F7CD37C01A6027B295F3C" 2658 179
+Tue Nov 13 01:02:01 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/3E78309B1E7A1045716037A2C4276D20F35001FD" 2658 180
+Tue Nov 13 01:02:01 2018  	OPEN	"/etc/localtime" 2116 11
+Tue Nov 13 01:02:02 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:02:02 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:02:02 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:02:02 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:02:02 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:02:02 2018  	READ	"/proc/stat" 	1024 	683 990
+Tue Nov 13 01:02:02 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:02:06 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/97AE667565B6120DDEBF42730CC21468FE5AC36E" 2658 186
+Tue Nov 13 01:02:07 2018  	OPEN	"/proc/self/mountinfo" 2658 187
+Tue Nov 13 01:02:11 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:02:11 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:02:11 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:02:11 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:02:11 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:02:11 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:02:11 2018  	READ	"/proc/stat" 	1024 	683 990
+Tue Nov 13 01:02:11 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:02:21 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:02:21 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:02:21 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:02:21 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:02:21 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:02:21 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:02:21 2018  	READ	"/proc/stat" 	1024 	684 990
+Tue Nov 13 01:02:21 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:02:31 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:02:31 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:02:31 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:02:31 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:02:31 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:02:31 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:02:31 2018  	READ	"/proc/stat" 	1024 	684 990
+Tue Nov 13 01:02:31 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:02:41 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:02:41 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:02:41 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:02:41 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:02:41 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:02:41 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:02:41 2018  	READ	"/proc/stat" 	1024 	684 990
+Tue Nov 13 01:02:41 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:02:51 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:02:51 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:02:51 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:02:51 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:02:51 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:02:51 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:02:51 2018  	READ	"/proc/stat" 	1024 	684 990
+Tue Nov 13 01:02:51 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:02:52 2018  	OPEN	"/dev/shm/" 2658 121
+Tue Nov 13 01:02:52 2018  	OPEN	"/dev/shm/org.chromium.qsfBa5" 2658 40
+Tue Nov 13 01:03:01 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:03:01 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:03:01 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:03:01 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:03:01 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:03:01 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:03:01 2018  	READ	"/proc/stat" 	1024 	684 990
+Tue Nov 13 01:03:01 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:03:11 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/startupCache/startupCache.8.little" 2658 37
+Tue Nov 13 01:03:11 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:03:11 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:03:11 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:03:11 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:03:11 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:03:11 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:03:11 2018  	READ	"/proc/stat" 	1024 	684 990
+Tue Nov 13 01:03:11 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:03:18 2018  	OPEN	"/home/katsanis/.cache/mozilla/firefox/nhp1iy1u.default/cache2/entries/2738306FACFE22E25776D524BC1CBAB65D5EAA62" 2658 175
+Tue Nov 13 01:03:21 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:03:21 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:03:21 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:03:21 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:03:21 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:03:21 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:03:21 2018  	READ	"/proc/stat" 	1024 	684 990
+Tue Nov 13 01:03:21 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:03:31 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:03:31 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:03:31 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:03:31 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:03:31 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:03:31 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:03:31 2018  	READ	"/proc/stat" 	1024 	684 990
+Tue Nov 13 01:03:31 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:03:41 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:03:41 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:03:41 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:03:41 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:03:41 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:03:41 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:03:41 2018  	READ	"/proc/stat" 	1024 	684 990
+Tue Nov 13 01:03:41 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:03:51 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:03:51 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:03:51 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:03:51 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:03:51 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:03:51 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:03:51 2018  	READ	"/proc/stat" 	1024 	684 990
+Tue Nov 13 01:03:51 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:04:01 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:04:02 2018  	OPEN	"/run/udev/" 8062 14
+Tue Nov 13 01:04:02 2018  	OPEN	"/proc/self/oom_score_adj" 15468 7
+Tue Nov 13 01:04:02 2018  	WRITE	"/proc/self/oom_score_adj" 	0 	2 15468
+Tue Nov 13 01:04:02 2018  	CLOSE	"/proc/self/oom_score_adj" 15468
+Tue Nov 13 01:04:02 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/uevent" 15468 7
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/uevent" 	0 	254 15468
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/uevent" 	254 	0 15468
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/uevent" 	254 	0 15468
+Tue Nov 13 01:04:02 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/uevent" 15468
+Tue Nov 13 01:04:02 2018  	OPEN	"/sys/devices/virtual/dmi/id/sys_vendor" 15468 7
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/virtual/dmi/id/sys_vendor" 	0 	4 15468
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/virtual/dmi/id/sys_vendor" 	4 	0 15468
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/virtual/dmi/id/sys_vendor" 	4 	0 15468
+Tue Nov 13 01:04:02 2018  	CLOSE	"/sys/devices/virtual/dmi/id/sys_vendor" 15468
+Tue Nov 13 01:04:02 2018  	OPEN	"/sys/devices/virtual/dmi/id/sys_vendor" 15468 7
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/virtual/dmi/id/sys_vendor" 	0 	4 15468
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/virtual/dmi/id/sys_vendor" 	4 	0 15468
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/virtual/dmi/id/sys_vendor" 	4 	0 15468
+Tue Nov 13 01:04:02 2018  	CLOSE	"/sys/devices/virtual/dmi/id/sys_vendor" 15468
+Tue Nov 13 01:04:02 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/idVendor" 15468 7
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/idVendor" 	0 	5 15468
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/idVendor" 	5 	0 15468
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/idVendor" 	5 	0 15468
+Tue Nov 13 01:04:02 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/idVendor" 15468
+Tue Nov 13 01:04:02 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/idVendor" 15468 7
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/idVendor" 	0 	5 15468
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/idVendor" 	5 	0 15468
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/idVendor" 	5 	0 15468
+Tue Nov 13 01:04:02 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/idVendor" 15468
+Tue Nov 13 01:04:02 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/uevent" 15468 7
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/uevent" 	0 	180 15468
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/uevent" 	180 	0 15468
+Tue Nov 13 01:04:02 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/uevent" 	180 	0 15468
+Tue Nov 13 01:04:02 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/uevent" 15468
+Tue Nov 13 01:04:02 2018  	OPEN	"/run/udev/data/+hid:0003:046D:2011.0005" 15468 7
+Tue Nov 13 01:04:02 2018  	READ	"/run/udev/data/+hid:0003:046D:2011.0005" 	0 	73 15468
+Tue Nov 13 01:04:02 2018  	READ	"/run/udev/data/+hid:0003:046D:2011.0005" 	73 	0 15468
+Tue Nov 13 01:04:04 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:04:04 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:04:04 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:04:04 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:04:04 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:04:04 2018  	READ	"/proc/stat" 	1024 	684 990
+Tue Nov 13 01:04:04 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:04:05 2018  	READ	"/run/udev/data/+hid:0003:046D:2011.0005" 	73 	119 15468
+Tue Nov 13 01:04:05 2018  	CLOSE	"/run/udev/data/+hid:0003:046D:2011.0005" 15468
+Tue Nov 13 01:04:05 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceNumber" 15468 7
+Tue Nov 13 01:04:05 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceNumber" 	0 	3 15468
+Tue Nov 13 01:04:05 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceNumber" 	3 	0 15468
+Tue Nov 13 01:04:05 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceNumber" 	3 	0 15468
+Tue Nov 13 01:04:05 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceNumber" 15468
+Tue Nov 13 01:04:05 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceClass" 15468 7
+Tue Nov 13 01:04:05 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceClass" 	0 	3 15468
+Tue Nov 13 01:04:05 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceClass" 	3 	0 15468
+Tue Nov 13 01:04:05 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceClass" 	3 	0 15468
+Tue Nov 13 01:04:05 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceClass" 15468
+Tue Nov 13 01:04:05 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/scope" 1423 9
+Tue Nov 13 01:04:05 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/scope" 	0 	7 1423
+Tue Nov 13 01:04:05 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/scope" 	7 	0 1423
+Tue Nov 13 01:04:05 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/scope" 	7 	0 1423
+Tue Nov 13 01:04:05 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/scope" 1423
+Tue Nov 13 01:04:13 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:04:13 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:04:13 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:04:13 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:04:13 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:04:13 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:04:13 2018  	READ	"/proc/stat" 	1024 	686 990
+Tue Nov 13 01:04:13 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:04:15 2018  	OPEN	"/proc/self/mountinfo" 2658 192
+Tue Nov 13 01:04:17 2018  	OPEN	"/proc/self/mountinfo" 2658 195
+Tue Nov 13 01:04:23 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:04:23 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:04:23 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:04:23 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:04:23 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:04:23 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:04:23 2018  	READ	"/proc/stat" 	1024 	687 990
+Tue Nov 13 01:04:23 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:04:33 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:04:33 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:04:33 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:04:33 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:04:33 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:04:33 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:04:33 2018  	READ	"/proc/stat" 	1024 	687 990
+Tue Nov 13 01:04:33 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:04:42 2018  	OPEN	"/proc/self/oom_score_adj" 15474 7
+Tue Nov 13 01:04:42 2018  	WRITE	"/proc/self/oom_score_adj" 	0 	2 15474
+Tue Nov 13 01:04:42 2018  	CLOSE	"/proc/self/oom_score_adj" 15474
+Tue Nov 13 01:04:42 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/uevent" 15474 7
+Tue Nov 13 01:04:42 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/uevent" 	0 	255 15474
+Tue Nov 13 01:04:42 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/uevent" 	255 	0 15474
+Tue Nov 13 01:04:42 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/uevent" 	255 	0 15474
+Tue Nov 13 01:04:42 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/uevent" 15474
+Tue Nov 13 01:04:42 2018  	OPEN	"/sys/devices/virtual/dmi/id/sys_vendor" 15474 7
+Tue Nov 13 01:04:42 2018  	READ	"/sys/devices/virtual/dmi/id/sys_vendor" 	0 	4 15474
+Tue Nov 13 01:04:42 2018  	READ	"/sys/devices/virtual/dmi/id/sys_vendor" 	4 	0 15474
+Tue Nov 13 01:04:42 2018  	READ	"/sys/devices/virtual/dmi/id/sys_vendor" 	4 	0 15474
+Tue Nov 13 01:04:42 2018  	CLOSE	"/sys/devices/virtual/dmi/id/sys_vendor" 15474
+Tue Nov 13 01:04:42 2018  	OPEN	"/sys/devices/virtual/dmi/id/sys_vendor" 15474 7
+Tue Nov 13 01:04:42 2018  	READ	"/sys/devices/virtual/dmi/id/sys_vendor" 	0 	4 15474
+Tue Nov 13 01:04:43 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:04:43 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:04:43 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:04:43 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:04:43 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:04:43 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:04:43 2018  	READ	"/proc/stat" 	1024 	687 990
+Tue Nov 13 01:04:43 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:04:44 2018  	OPEN	"/etc/ld.so.cache" 15475 3
+Tue Nov 13 01:04:44 2018  	CLOSE	"/etc/ld.so.cache" 15475
+Tue Nov 13 01:04:44 2018  	OPEN	"/lib/x86_64-linux-gnu/libc.so.6" 15475 3
+Tue Nov 13 01:04:44 2018  	READ	"/lib/x86_64-linux-gnu/libc.so.6" 	0 	832 15475
+Tue Nov 13 01:04:44 2018  	CLOSE	"/lib/x86_64-linux-gnu/libc.so.6" 15475
+Tue Nov 13 01:04:44 2018  	OPEN	"/etc/ld.so.cache" 15476 3
+Tue Nov 13 01:04:44 2018  	CLOSE	"/etc/ld.so.cache" 15476
+Tue Nov 13 01:04:44 2018  	OPEN	"/usr/lib/x86_64-linux-gnu/libX11.so.6" 15476 3
+Tue Nov 13 01:04:44 2018  	READ	"/usr/lib/x86_64-linux-gnu/libX11.so.6" 	0 	832 15476
+Tue Nov 13 01:04:44 2018  	CLOSE	"/usr/lib/x86_64-linux-gnu/libX11.so.6" 15476
+Tue Nov 13 01:04:44 2018  	OPEN	"/usr/lib/x86_64-linux-gnu/libxkbfile.so.1" 15476 3
+Tue Nov 13 01:04:44 2018  	READ	"/usr/lib/x86_64-linux-gnu/libxkbfile.so.1" 	0 	832 15476
+Tue Nov 13 01:04:44 2018  	CLOSE	"/usr/lib/x86_64-linux-gnu/libxkbfile.so.1" 15476
+Tue Nov 13 01:04:44 2018  	OPEN	"/lib/x86_64-linux-gnu/libc.so.6" 15476 3
+Tue Nov 13 01:04:44 2018  	READ	"/lib/x86_64-linux-gnu/libc.so.6" 	0 	832 15476
+Tue Nov 13 01:04:44 2018  	CLOSE	"/lib/x86_64-linux-gnu/libc.so.6" 15476
+Tue Nov 13 01:04:44 2018  	OPEN	"/usr/lib/x86_64-linux-gnu/libxcb.so.1" 15476 3
+Tue Nov 13 01:04:44 2018  	READ	"/usr/lib/x86_64-linux-gnu/libxcb.so.1" 	0 	832 15476
+Tue Nov 13 01:04:44 2018  	CLOSE	"/usr/lib/x86_64-linux-gnu/libxcb.so.1" 15476
+Tue Nov 13 01:04:44 2018  	OPEN	"/lib/x86_64-linux-gnu/libdl.so.2" 15476 3
+Tue Nov 13 01:04:44 2018  	READ	"/lib/x86_64-linux-gnu/libdl.so.2" 	0 	832 15476
+Tue Nov 13 01:04:44 2018  	CLOSE	"/lib/x86_64-linux-gnu/libdl.so.2" 15476
+Tue Nov 13 01:04:44 2018  	OPEN	"/usr/lib/x86_64-linux-gnu/libXau.so.6" 15476 3
+Tue Nov 13 01:04:44 2018  	READ	"/usr/lib/x86_64-linux-gnu/libXau.so.6" 	0 	832 15476
+Tue Nov 13 01:04:44 2018  	CLOSE	"/usr/lib/x86_64-linux-gnu/libXau.so.6" 15476
+Tue Nov 13 01:04:44 2018  	OPEN	"/usr/lib/x86_64-linux-gnu/libXdmcp.so.6" 15476 3
+Tue Nov 13 01:04:44 2018  	READ	"/usr/lib/x86_64-linux-gnu/libXdmcp.so.6" 	0 	832 15476
+Tue Nov 13 01:04:44 2018  	CLOSE	"/usr/lib/x86_64-linux-gnu/libXdmcp.so.6" 15476
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/virtual/dmi/id/sys_vendor" 	4 	0 15474
+Tue Nov 13 01:04:44 2018  	CLOSE	"/sys/devices/virtual/dmi/id/sys_vendor" 15474
+Tue Nov 13 01:04:44 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/idVendor" 15474 7
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/idVendor" 	0 	5 15474
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/idVendor" 	5 	0 15474
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/idVendor" 	5 	0 15474
+Tue Nov 13 01:04:44 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/idVendor" 15474
+Tue Nov 13 01:04:44 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/idVendor" 15474 7
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/idVendor" 	0 	5 15474
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/idVendor" 	5 	0 15474
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/idVendor" 	5 	0 15474
+Tue Nov 13 01:04:44 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/idVendor" 15474
+Tue Nov 13 01:04:44 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/uevent" 15474 7
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/uevent" 	0 	180 15474
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/uevent" 	180 	0 15474
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/uevent" 	180 	0 15474
+Tue Nov 13 01:04:44 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/uevent" 15474
+Tue Nov 13 01:04:44 2018  	OPEN	"/run/udev/data/+hid:0003:046D:2011.0005" 15474 7
+Tue Nov 13 01:04:44 2018  	READ	"/run/udev/data/+hid:0003:046D:2011.0005" 	0 	73 15474
+Tue Nov 13 01:04:44 2018  	READ	"/run/udev/data/+hid:0003:046D:2011.0005" 	73 	0 15474
+Tue Nov 13 01:04:44 2018  	CLOSE	"/run/udev/data/+hid:0003:046D:2011.0005" 15474
+Tue Nov 13 01:04:44 2018  	OPEN	"/proc/cmdline" 15474 7
+Tue Nov 13 01:04:44 2018  	READ	"/proc/cmdline" 	0 	119 15474
+Tue Nov 13 01:04:44 2018  	CLOSE	"/proc/cmdline" 15474
+Tue Nov 13 01:04:44 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceNumber" 15474 7
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceNumber" 	0 	3 15474
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceNumber" 	3 	0 15474
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceNumber" 	3 	0 15474
+Tue Nov 13 01:04:44 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceNumber" 15474
+Tue Nov 13 01:04:44 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceClass" 15474 7
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceClass" 	0 	3 15474
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceClass" 	3 	0 15474
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceClass" 	3 	0 15474
+Tue Nov 13 01:04:44 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceClass" 15474
+Tue Nov 13 01:04:44 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/scope" 1423 9
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/scope" 	0 	7 1423
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/scope" 	7 	0 1423
+Tue Nov 13 01:04:44 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/scope" 	7 	0 1423
+Tue Nov 13 01:04:44 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/scope" 1423
+Tue Nov 13 01:04:45 2018  	OPEN	"/var/lib/xkb/" 15476 0
+Tue Nov 13 01:04:45 2018  	WRITE	"/var/lib/xkb/" 	0 	4096 15476
+Tue Nov 13 01:04:45 2018  	WRITE	"/var/lib/xkb/" 	4096 	4096 15476
+Tue Nov 13 01:04:45 2018  	WRITE	"/var/lib/xkb/" 	8192 	3120 15476
+Tue Nov 13 01:04:45 2018  	CLOSE	"/var/lib/xkb/" 15476
+Tue Nov 13 01:04:45 2018  	OPEN	"/var/lib/xkb/server-0.xkm" 997 102
+Tue Nov 13 01:04:53 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:04:53 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:04:53 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:04:53 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:04:53 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:04:53 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:04:53 2018  	READ	"/proc/stat" 	1024 	687 990
+Tue Nov 13 01:04:53 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:04:57 2018  	OPEN	"/proc/self/oom_score_adj" 15477 7
+Tue Nov 13 01:04:57 2018  	WRITE	"/proc/self/oom_score_adj" 	0 	2 15477
+Tue Nov 13 01:04:57 2018  	CLOSE	"/proc/self/oom_score_adj" 15477
+Tue Nov 13 01:04:57 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/uevent" 15477 7
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/uevent" 	0 	255 15477
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/uevent" 	255 	0 15477
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/uevent" 	255 	0 15477
+Tue Nov 13 01:04:57 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/uevent" 15477
+Tue Nov 13 01:04:57 2018  	OPEN	"/sys/devices/virtual/dmi/id/sys_vendor" 15477 7
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/virtual/dmi/id/sys_vendor" 	0 	4 15477
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/virtual/dmi/id/sys_vendor" 	4 	0 15477
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/virtual/dmi/id/sys_vendor" 	4 	0 15477
+Tue Nov 13 01:04:57 2018  	CLOSE	"/sys/devices/virtual/dmi/id/sys_vendor" 15477
+Tue Nov 13 01:04:57 2018  	OPEN	"/sys/devices/virtual/dmi/id/sys_vendor" 15477 7
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/virtual/dmi/id/sys_vendor" 	0 	4 15477
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/virtual/dmi/id/sys_vendor" 	4 	0 15477
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/virtual/dmi/id/sys_vendor" 	4 	0 15477
+Tue Nov 13 01:04:57 2018  	CLOSE	"/sys/devices/virtual/dmi/id/sys_vendor" 15477
+Tue Nov 13 01:04:57 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/idVendor" 15477 7
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/idVendor" 	0 	5 15477
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/idVendor" 	5 	0 15477
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/idVendor" 	5 	0 15477
+Tue Nov 13 01:04:57 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/idVendor" 15477
+Tue Nov 13 01:04:57 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/idVendor" 15477 7
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/idVendor" 	0 	5 15477
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/idVendor" 	5 	0 15477
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/idVendor" 	5 	0 15477
+Tue Nov 13 01:04:57 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/idVendor" 15477
+Tue Nov 13 01:04:57 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/uevent" 15477 7
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/uevent" 	0 	180 15477
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/uevent" 	180 	0 15477
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/uevent" 	180 	0 15477
+Tue Nov 13 01:04:57 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/uevent" 15477
+Tue Nov 13 01:04:57 2018  	OPEN	"/run/udev/data/+hid:0003:046D:2011.0005" 15477 7
+Tue Nov 13 01:04:57 2018  	READ	"/run/udev/data/+hid:0003:046D:2011.0005" 	0 	73 15477
+Tue Nov 13 01:04:57 2018  	READ	"/run/udev/data/+hid:0003:046D:2011.0005" 	73 	0 15477
+Tue Nov 13 01:04:57 2018  	CLOSE	"/run/udev/data/+hid:0003:046D:2011.0005" 15477
+Tue Nov 13 01:04:57 2018  	OPEN	"/proc/cmdline" 15477 7
+Tue Nov 13 01:04:57 2018  	READ	"/proc/cmdline" 	0 	119 15477
+Tue Nov 13 01:04:57 2018  	CLOSE	"/proc/cmdline" 15477
+Tue Nov 13 01:04:57 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceNumber" 15477 7
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceNumber" 	0 	3 15477
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceNumber" 	3 	0 15477
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceNumber" 	3 	0 15477
+Tue Nov 13 01:04:57 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceNumber" 15477
+Tue Nov 13 01:04:57 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceClass" 15477 7
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceClass" 	0 	3 15477
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceClass" 	3 	0 15477
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceClass" 	3 	0 15477
+Tue Nov 13 01:04:57 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/bInterfaceClass" 15477
+Tue Nov 13 01:04:57 2018  	OPEN	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/scope" 1423 9
+Tue Nov 13 01:04:57 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/scope" 	0 	7 1423
+Tue Nov 13 01:04:59 2018  	READ	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/scope" 	7 	0 1423
+Tue Nov 13 01:04:59 2018  	CLOSE	"/sys/devices/pci0000:00/0000:00:13.0/usb5/5-2/5-2:1.2/0003:046D:C52B.0003/0003:046D:2011.0005/power_supply/hidpp_battery_0/scope" 1423
+Tue Nov 13 01:05:03 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:05:03 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:05:03 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:05:03 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:05:03 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:05:03 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:05:03 2018  	READ	"/proc/stat" 	1024 	687 990
+Tue Nov 13 01:05:03 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:05:13 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:05:13 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:05:13 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:05:13 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:05:13 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:05:13 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:05:13 2018  	READ	"/proc/stat" 	1024 	687 990
+Tue Nov 13 01:05:13 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:05:21 2018  	OPEN	"/usr/lib/firefox/browser/features/webcompat@mozilla.org.xpi" 2658 86
+Tue Nov 13 01:05:22 2018  	OPEN	"/etc/ld.so.cache" 15479 3
+Tue Nov 13 01:05:22 2018  	CLOSE	"/etc/ld.so.cache" 15479
+Tue Nov 13 01:05:22 2018  	OPEN	"/lib/x86_64-linux-gnu/libaudit.so.1" 15479 3
+Tue Nov 13 01:05:22 2018  	READ	"/lib/x86_64-linux-gnu/libaudit.so.1" 	0 	832 15479
+Tue Nov 13 01:05:22 2018  	CLOSE	"/lib/x86_64-linux-gnu/libaudit.so.1" 15479
+Tue Nov 13 01:05:22 2018  	OPEN	"/lib/x86_64-linux-gnu/libauparse.so.0" 15479 3
+Tue Nov 13 01:05:22 2018  	READ	"/lib/x86_64-linux-gnu/libauparse.so.0" 	0 	832 15479
+Tue Nov 13 01:05:22 2018  	CLOSE	"/lib/x86_64-linux-gnu/libauparse.so.0" 15479
+Tue Nov 13 01:05:22 2018  	OPEN	"/lib/x86_64-linux-gnu/libc.so.6" 15479 3
+Tue Nov 13 01:05:22 2018  	READ	"/lib/x86_64-linux-gnu/libc.so.6" 	0 	832 15479
+Tue Nov 13 01:05:22 2018  	CLOSE	"/lib/x86_64-linux-gnu/libc.so.6" 15479
+Tue Nov 13 01:05:23 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:05:23 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:05:23 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:05:23 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:05:23 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:05:23 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:05:23 2018  	READ	"/proc/stat" 	1024 	688 990
+Tue Nov 13 01:05:23 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:05:27 2018  	OPEN	"/home/katsanis/.mozilla/firefox/nhp1iy1u.default/" 2658 124
+Tue Nov 13 01:05:33 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:05:33 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:05:33 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:05:33 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:05:33 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:05:33 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:05:33 2018  	READ	"/proc/stat" 	1024 	688 990
+Tue Nov 13 01:05:33 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:05:43 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:05:43 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:05:43 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:05:43 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:05:43 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:05:43 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:05:43 2018  	READ	"/proc/stat" 	1024 	688 990
+Tue Nov 13 01:05:43 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:05:53 2018  	OPEN	"/proc/interrupts" 990 3
+Tue Nov 13 01:05:53 2018  	READ	"/proc/interrupts" 	0 	1024 990
+Tue Nov 13 01:05:53 2018  	READ	"/proc/interrupts" 	1024 	1024 990
+Tue Nov 13 01:05:53 2018  	CLOSE	"/proc/interrupts" 990
+Tue Nov 13 01:05:53 2018  	OPEN	"/proc/stat" 990 3
+Tue Nov 13 01:05:53 2018  	READ	"/proc/stat" 	0 	1024 990
+Tue Nov 13 01:05:53 2018  	READ	"/proc/stat" 	1024 	688 990
+Tue Nov 13 01:05:53 2018  	CLOSE	"/proc/stat" 990
+Tue Nov 13 01:06:01 2018  	OPEN	"/etc/ld.so.cache" 15484 3
+Tue Nov 13 01:06:03 2018  	CLOSE	"/etc/ld.so.cache" 15484
+Tue Nov 13 01:06:03 2018  	OPEN	"/lib/x86_64-linux-gnu/libaudit.so.1" 15484 3
+Tue Nov 13 01:06:03 2018  	READ	"/lib/x86_64-linux-gnu/libaudit.so.1" 	0 	832 15484
+Tue Nov 13 01:06:03 2018  	CLOSE	"/lib/x86_64-linux-gnu/libaudit.so.1" 15484
+Tue Nov 13 01:06:03 2018  	OPEN	"/lib/x86_64-linux-gnu/libauparse.so.0" 15484 3
+Tue Nov 13 01:06:03 2018  	READ	"/lib/x86_64-linux-gnu/libauparse.so.0" 	0 	832 15484
+Tue Nov 13 01:06:03 2018  	CLOSE	"/lib/x86_64-linux-gnu/libauparse.so.0" 15484
+Tue Nov 13 01:06:03 2018  	OPEN	"/lib/x86_64-linux-gnu/libc.so.6" 15484 3
+Tue Nov 13 01:06:03 2018  	READ	"/lib/x86_64-linux-gnu/libc.so.6" 	0 	832 15484
+Tue Nov 13 01:06:03 2018  	CLOSE	"/lib/x86_64-linux-gnu/libc.so.6" 15484
