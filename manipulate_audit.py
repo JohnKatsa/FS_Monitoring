@@ -39,15 +39,14 @@ def read_record(data,fh_to_fn_and_p):
         elif "syscall=18" == token:
             pread_pwrite_args(data,1,fh_to_fn_and_p,time)
 
-    #print data, " \\\\\ "
-
 def main():
     useful = []
     record = ""
 
-    fh_to_fn_and_p = [] # list with a pid, a file handler, a file name and a file pointer
+    fh_to_fn_and_p = {} # list with a pid, a file handler, a file name and a file pointer
+    print ("DATE \t OPERATION \t FILENAME \t POSITION \t PROCESS_ID")
 
-    with open ("report3.txt", "r") as myfile:
+    with open ("./reports/report_BIG.txt", "r") as myfile:
         for line in myfile:
             if "----" not in line:
                 useful.append(line)
@@ -56,7 +55,7 @@ def main():
                     read_record(record.split(),fh_to_fn_and_p)
                 useful = []
             record = "".join(useful)
-    print fh_to_fn_and_p
+    print (fh_to_fn_and_p)
 
 if __name__ == "__main__":
     main()
