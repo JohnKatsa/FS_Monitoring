@@ -2,42 +2,34 @@ from all_args import *
 
 """function to read an audit record and extract data"""
 def read_record(data,fh_to_fn_and_p):
-    timeflag = 0
-    time = ""
     for token in data:
-        if "time->" in token:
-            time += (token.split("->")[1]+' ')
-            timeflag = 4
-        elif timeflag:
-            time += (token+' ')
-            timeflag -= 1
         # read
-        elif "syscall=0" == token:
-            read_write_args(data,0,fh_to_fn_and_p,time)
+        if "syscall=read" == token:
+            read_write_args(data,0,fh_to_fn_and_p)
         # write
-        elif "syscall=1" == token:
-            read_write_args(data,1,fh_to_fn_and_p,time)
+        elif "syscall=write" == token:
+            read_write_args(data,1,fh_to_fn_and_p)
         # open
-        elif "syscall=2" == token:
-            open_args(data,fh_to_fn_and_p,time)
+        elif "syscall=open" == token:
+            open_args(data,fh_to_fn_and_p)
         # close
-        elif "syscall=3" == token:
-            close_args(data,fh_to_fn_and_p,time)
+        elif "syscall=close" == token:
+            close_args(data,fh_to_fn_and_p)
         # lseek
-        elif "syscall=8" == token:
-            lseek_args(data,fh_to_fn_and_p,time)
+        elif "syscall=lseek" == token:
+            lseek_args(data,fh_to_fn_and_p)
         # dup, dup2, dup3
-        elif "syscall=32" == token or "syscall=33" == token or "syscall=292" == token:
-            dup_args(data,fh_to_fn_and_p,time)
+        elif "syscall=dup" == token or "syscall=dup2" == token or "syscall=dup3" == token:
+            dup_args(data,fh_to_fn_and_p)
         # fork, clone, vfork
-        elif "syscall=57" == token or "syscall=58" == token:
-            fork_args(data,fh_to_fn_and_p,time)
+        elif "syscall=fork" == token or "syscall=clone" == token:
+            fork_args(data,fh_to_fn_and_p)
         # pread
-        elif "syscall=17" == token:
-            pread_pwrite_args(data,0,fh_to_fn_and_p,time)
+        elif "syscall=pread" == token:
+            pread_pwrite_args(data,0,fh_to_fn_and_p)
         # pwrite
-        elif "syscall=18" == token:
-            pread_pwrite_args(data,1,fh_to_fn_and_p,time)
+        elif "syscall=pwrite" == token:
+            pread_pwrite_args(data,1,fh_to_fn_and_p)
 
 def main():
     useful = []
@@ -46,7 +38,7 @@ def main():
     fh_to_fn_and_p = {} # list with a pid, a file handler, a file name and a file pointer
     print ("DATE \t OPERATION \t FILENAME \t POSITION \t PROCESS_ID")
 
-    with open ("./reports/report_BIG.txt", "r") as myfile:
+    with open ("/home/katsanis/Desktop/input3", "r") as myfile:
         for line in myfile:
             if "----" not in line:
                 useful.append(line)
