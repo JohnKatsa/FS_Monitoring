@@ -1,4 +1,5 @@
 from all_args import *
+from anonymize import *
 
 """function to read an audit record and extract data"""
 def read_record(data,fh_to_fn_and_p):
@@ -48,6 +49,8 @@ def main():
                 useful = []
             record = "".join(useful)
     print (fh_to_fn_and_p)
+
+    print(anonymize("hello"))
 
 if __name__ == "__main__":
     main()

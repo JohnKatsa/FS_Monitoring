@@ -1,3 +1,5 @@
+from anonymize import *
+
 """function to determine read/write arguments"""
 def read_write_args(data,sys_id,fh_to_fn_and_p):
     for token in data:
