@@ -1,7 +1,7 @@
---Before running the script: my_script.sh, add a file, folder or system call to watch list.
-
---After there has been enough monitoring, call: bash my_script.sh.
-
-  It will produce an output file, myfileout, which is the appropriate style file.
-
---Open myfileout and take a look at the statistics.
+1) Audited
+2) Got audit log
+3) Parsed audit log (manipulate_audit.py & all_args.py)
+4) Produced log
+5) Encrypted log  (anonymize.py)
+6) Client app took the Encrypted log and send it to server app (client_app.py)
+7) Server app waits for client to trigger connection, receives log and saves it to another local file. (server_app.py)
