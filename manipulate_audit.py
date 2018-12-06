@@ -48,9 +48,6 @@ def main():
                     read_record(record.split(),fh_to_fn_and_p)
                 useful = []
             record = "".join(useful)
-    print (fh_to_fn_and_p)
-
-    print(anonymize("hello"))
 
 if __name__ == "__main__":
     main()
