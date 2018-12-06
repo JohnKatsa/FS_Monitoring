@@ -31,16 +31,17 @@ def open_args(data,fh_to_fn_and_p):
             name = token.split("=")[1]
             flag = 0
         elif "name=" in token:
-            print("OPENDIR \t", token.split("=")[1])
+            print("OPENDIR \t", anonymize(token.split("=")[1]))
         elif "exit=" in token:
             fh = int(token.split("=")[1])
         elif "success=" in token:
             success = token.split("=")[1]
 
-    # check if same pid with same fh does it more than once
-    fh_to_fn_and_p[(pid,fh)] = [name,0]
+    anonymizedName = anonymize(name)
 
-    print ("OPEN\t", name, pid, fh)
+    fh_to_fn_and_p[(pid,fh)] = [anonymizedName,0]
+
+    print ("OPEN\t", anonymizedName, pid, fh)
 
 """function to determine close arguments"""
 def close_args(data,fh_to_fn_and_p):
@@ -52,7 +53,9 @@ def close_args(data,fh_to_fn_and_p):
 
     #search for pid
     if (pid,fh) in fh_to_fn_and_p:
+        name, pos = fh_to_fn_and_p[(pid,fh)]
         del fh_to_fn_and_p[(pid,fh)]
+        print("CLOSE\t", name)
 
 """function to determine lseek arguments"""
 def lseek_args(data,fh_to_fn_and_p):
