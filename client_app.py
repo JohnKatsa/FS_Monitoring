@@ -12,19 +12,10 @@ print('connecting to %s port %s' % server_address)
 sock.connect(server_address)
 
 # Send data
-with open ("/home/katsanis/Desktop/input3", "r") as myfile:
+with open ("/home/katsanis/Desktop/tst2", "r") as myfile:
     for message in myfile:
         print('sending ', message)
         sock.send(message.encode())
-
-        """# Look for the response
-        amount_received = 0
-        amount_expected = len(message)
-
-        while amount_received < amount_expected:
-            data = sock.recv(buffsize)
-            amount_received += len(data)
-            print('received "%s"' % data)"""
 
 print('closing socket')
 sock.close()

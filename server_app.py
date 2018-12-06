@@ -21,14 +21,12 @@ while True:
 
     print('connection from', client_address)
 
-    # Receive the data in small chunks and retransmit it
+    # Receive the data in small chunks and save it
+    f = open("/home/katsanis/Desktop/tst22","a")
     while True:
         data = connection.recv(buffsize)
-        print('received "%s"' % data)
-        if data:
-            print('sending data back to the client')
-            connection.sendall(data)
-        else:
+        f.write(data.decode())
+        if not data:
             print('no more data from', client_address)
             break
 
