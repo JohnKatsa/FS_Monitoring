@@ -8,12 +8,12 @@
 
 # Increase the buffers to survive stress events.
 # Make this bigger for busy systems
--b 320
+-b 30000
 
 # Feel free to add below this line. See auditctl man page
 
 # exclude CWD line
 -a always,exclude -F msgtype=CWD
 
-# track all successful calls, on the user directory only. 
--a always,exit -S open,read,write,close,dup,dup2,fork,vfork,clone,lseek,mkdir,rmdir -F dir=/home/$USER -F success=1 -k yannis
+# track all successful calls, on the user directory only.
+-a always,exit -S open,read,write,close,dup,dup2,fork,vfork,clone,lseek,mkdir,rmdir -F success=1 -k yannis
