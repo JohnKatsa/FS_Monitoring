@@ -37,9 +37,9 @@ def main():
     record = ""
 
     fh_to_fn_and_p = {} # list with a pid, a file handler, a file name and a file pointer
-    print ("DATE \t OPERATION \t FILENAME \t POSITION \t PROCESS_ID")
+    print ("OPERATION \t FILENAME \t POSITION \t PROCESS_ID")
 
-    with open ("/home/katsanis/Desktop/input3", "r") as myfile:
+    with open ("/home/katsanis/Desktop/input4", "r") as myfile:
         for line in myfile:
             if "----" not in line:
                 useful.append(line)
@@ -48,6 +48,8 @@ def main():
                     read_record(record.split(),fh_to_fn_and_p)
                 useful = []
             record = "".join(useful)
+
+    print(fh_to_fn_and_p)
 
 if __name__ == "__main__":
     main()
