@@ -1,24 +1,38 @@
 "simple anonymization function"
 def anonymize(name):
     retname = ""
-    for c in name:
-        if ord(c) <= 33 + 31:
-            retname += chr(ord(c) + 31)
-        elif ord(c) <= 33 + 62:
-            retname += chr(ord(c) + 31)
-        else:
-            retname += chr(ord(c) - 62)
 
-    return retname
+    #load mapping file
+    lettersMap = {}
+    with open ("mapping.txt", "r") as myfile:
+        for line in myfile:
+            key = line.split("\t")[0]
+            value = line.split("\t")[1]
+            lettersMap[key] = value
+
+    for c in name:
+        if c in lettersMap:
+            retname += lettersMap[c]
+        else:   # eg greek
+            retname += c
+
+    return retname  
 
 def deanonymize(name):
     retname = ""
+
+    #load unmapping file
+    lettersMap = {}
+    with open ("unmapping.txt", "r") as myfile:
+        for line in myfile:
+            key = line.split("\t")[0]
+            value = line.split("\t")[1]
+            lettersMap[key] = value
+
     for c in name:
-        if ord(c) <= 33 + 31:
-            retname += chr(ord(c) + 62)
-        elif ord(c) <= 33 + 62:
-            retname += chr(ord(c) - 31)
+        if c in lettersMap:
+            retname += lettersMap[c]
         else:
-            retname += chr(ord(c) - 31)
+            retname += c
 
     return retname
