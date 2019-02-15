@@ -1,0 +1,4 @@
+here we store log files
+
+e.g. log0.log ----> pre-parse file
+	 log0out.log -> after-parse file
