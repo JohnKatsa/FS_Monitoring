@@ -37,12 +37,16 @@ def main():
         filenameout = "./ftp/log" + str(i) + "out.log"
 
         # then we sleep until its time to parse and upload
-        if i != 0:
-            time.sleep(180)
-        result = subprocess.run(['ausearch', '--checkpoint', 'temp.txt', '-i'], stdout=subprocess.PIPE)
+        time.sleep(180)
+        
+        # ausearch with file
+        result = subprocess.run(['ausearch', '--checkpoint', 'temp.txt', '-i'], stdout=subprocess.PIPE).stdout.decode('utf-8')
+        if not result:   #(stdout is null in case of error) run ausearch -ts
+            result = subprocess.run(['ausearch', '--start', 'checkpoint', 'temp.txt', '-i'], stdout=subprocess.PIPE).stdout.decode('utf-8')
+        
 
         file = open(filename,"a+")
-        file.write(result.stdout.decode('utf-8'))
+        file.write(result)
         file.close()
 
         # parse and upload
@@ -54,8 +58,6 @@ def main():
 
         # FTP log transfer 
         # https://www.pythonforbeginners.com/code-snippets-source-code/how-to-use-ftp-in-python
-
-        i += 1
 
 if __name__ == "__main__":
     main()
