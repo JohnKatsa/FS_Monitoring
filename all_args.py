@@ -10,9 +10,9 @@ def read_write_args(data,sys_id,fh_to_fn_and_p,filesMap,fileNameOut):
         elif "exit=" in token:
             bytes_num = token.split("=")[1]
 
-    pid = int(pid)
-    fh = int(fh,16)
-    bytes_num = int(bytes_num)
+    pid = int(pid)              # this is the process id
+    fh = int(fh,16)             # this is the file descriptor
+    bytes_num = int(bytes_num)  # this is the number of bytes read or written
 
     # check if open audited
     if (pid,fh) in fh_to_fn_and_p:
@@ -50,10 +50,9 @@ def open_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
             flags = token.split("=")[1]
 
     # anonymize file name
-    anonymizedName = anonymize(name)
-    #anonymizedName = name
-    pid = int(pid)
-    fh = int(fh)
+    anonymizedName = anonymize(name)    # anonymize name to store
+    pid = int(pid)                      # process id
+    fh = int(fh)                        # file descriptor
 
     if "O_CREAT" in flags:
         filesMap[anonymizedName] = 0 # check at which point we should start
@@ -79,13 +78,13 @@ def close_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
         elif "a0=" in token:
             fh = token.split("=")[1]
 
-    pid = int(pid)
-    fh = int(fh,16)
+    pid = int(pid)      # process id
+    fh = int(fh,16)     # file descriptor   
 
-    #search for pid
+    # search for pid
+    # delete (pid,fh) from map
     if fh_to_fn_and_p.get((pid,fh)):
         name, pos = fh_to_fn_and_p[(pid,fh)]
-        #print(pid,fh,name,pos)
         del fh_to_fn_and_p[(pid,fh)]
 
         f = open(fileNameOut,"a+")
@@ -104,9 +103,9 @@ def lseek_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
         elif "a2=" in token:
             flags = token.split("=")[1]
 
-    pid = int(pid)
-    fh = int(fh,16)
-    offset = int(offset,16)
+    pid = int(pid)              # process id
+    fh = int(fh,16)             # file descriptor
+    offset = int(offset,16)     # number of bytes to move file pointer
 
     f = open(fileNameOut,"a+")
     if (pid,fh) in fh_to_fn_and_p:
@@ -132,10 +131,11 @@ def dup_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
         elif "exit=" in token:
             newfh = token.split("=")[1]
 
-    pid = int(pid)
-    oldfh = int(oldfh,16)
-    newfh = int(newfh)
+    pid = int(pid)          # process id 
+    oldfh = int(oldfh,16)   # old file descriptor
+    newfh = int(newfh)      # new file descriptor 
 
+    # change mapping value
     if fh_to_fn_and_p.get((pid,oldfh)):
         # copy old fd data to new fd record
         fh_to_fn_and_p[(pid,newfh)] = fh_to_fn_and_p.get((pid,oldfh))
@@ -143,8 +143,6 @@ def dup_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
         f = open(fileNameOut,"a+")
         print("DUP\t", "old fd = ", oldfh, "\t new fd = ", newfh, file=f)
         f.close()
-
-    #print(fh_to_fn_and_p)
 
 """function to determine fork/clone/vfork arguments"""
 def fork_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
@@ -154,20 +152,15 @@ def fork_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
         elif "exit=" in token:
             pid = token.split("=")[1]
 
-    pid = int(pid)
-    ppid = int(ppid)
+    pid = int(pid)      # process id
+    ppid = int(ppid)    # parent process id
 
     tmp_dict = {}   # dict changed size error solution
     for key in fh_to_fn_and_p:
-        #print(key[0])
         if key[0] == ppid:
             tmp_dict[(pid,key[1])] = fh_to_fn_and_p.get(key).copy()
 
-    #print(tmp_dict)
-
     fh_to_fn_and_p.update(tmp_dict)
-
-    #print(fh_to_fn_and_p)
 
     f = open(fileNameOut,"a+")
     print("FORK \t", "parent = ", ppid, "\t child = ", pid, file=f)
@@ -185,10 +178,10 @@ def pread_pwrite_args(data,sys_id,fh_to_fn_and_p,filesMap,fileNameOut):
         elif "a3=" in token:
             pos = token.split("=")[1]
 
-    pid = int(pid)
-    fh = int(fh,16)
-    bytes_num = int(bytes_num)
-    pos == int(pos,16)
+    pid = int(pid)                  # process id
+    fh = int(fh,16)                 # file descriptor
+    bytes_num = int(bytes_num)      # number of bytes read or written
+    pos = int(pos,16)               # position in file
 
     # write the results to map
     var = fh_to_fn_and_p.get((pid,fh))

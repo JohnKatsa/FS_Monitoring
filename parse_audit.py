@@ -50,5 +50,4 @@ def parse(fileName,fileNameOut,filesMap,fh_to_fn_and_p):
                 useful = []
             record = "".join(useful)
 
-    #print(fh_to_fn_and_p)
     return fh_to_fn_and_p
