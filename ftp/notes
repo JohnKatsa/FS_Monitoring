@@ -2,3 +2,7 @@ here we store log files
 
 e.g. log0.log ----> pre-parse file
 	 log0out.log -> after-parse file
+	 
+
+issue for backlog wait time:	 
+https://github.com/elastic/go-libaudit/issues/34
