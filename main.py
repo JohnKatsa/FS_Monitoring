@@ -100,15 +100,6 @@ def main():
     #configure audit
     configureAudit()
 
-    # user messages
-    print("Audit Configured. \nPreparing system..")
-
-    filesMap = {}
-    filesMap = makeFilesMap(os.environ['HOME']+'/')     # get user's file sizes
-
-    # user messages
-    print("System prepared.")
-
     currMap = {}
 
     # assign/make folder or find already made
@@ -118,9 +109,19 @@ def main():
     else:
         # user messages
         print("Clean audit logs:")
-
-        # (transfer via rsync) (check if exists log stacked from previous sessions)
+        # (transfer via rsync) (check if exists log stacked from previous sessions) (rsync only at beginning)
         rsyncLogs(folder)
+
+
+    # user messages
+    print("Audit Configured. \nPreparing system..")
+
+    filesMap = {}
+    filesMap = makeFilesMap(os.environ['HOME']+'/')     # get user's file sizes
+
+    # user messages
+    print("System prepared.")
+
 
     rewriteConfiguration(configuration,folder)
 
@@ -149,13 +150,6 @@ def main():
 
         # remove unparsed data
         subprocess.run(['rm', filename])
-
-        # rsync log transfer every 90 logs (90*(3 mins) = 3 hours)
-        if i%90 == 89:
-            # user messages
-            print("Clean audit logs:")
-            
-            rsyncLogs(folder)
 
         i += 1
         addplusplusIterator(iterator)
