@@ -106,6 +106,9 @@ def main():
     filesMap = {}
     filesMap = makeFilesMap(os.environ['HOME']+'/')     # get user's file sizes
 
+    # user messages
+    print("System prepared.")
+
     currMap = {}
 
     # assign/make folder or find already made
