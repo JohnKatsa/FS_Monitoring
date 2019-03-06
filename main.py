@@ -102,6 +102,9 @@ def main():
     #configure audit
     configureAudit()
 
+    # user messages
+    print("Audit Configured. \nPreparing system..")
+
     filesMap = {}
     filesMap = makeFilesMap(os.environ['HOME']+'/')     # get user's file sizes
 
@@ -112,6 +115,9 @@ def main():
     if first_time == 1:
         folder = assignFolder(configuration)
     else:
+        # user messages
+        print("Clean audit logs:")
+
         # (transfer via rsync) (check if exists log stacked from previous sessions)
         rsyncLogs(folder)
 
@@ -145,6 +151,9 @@ def main():
 
         # rsync log transfer every 90 logs (90*(3 mins) = 3 hours)
         if i%90 == 89:
+            # user messages
+            print("Clean audit logs:")
+            
             rsyncLogs(folder)
 
         i += 1
