@@ -121,6 +121,7 @@ def main():
 
     # user messages
     print("System prepared.")
+    print("The Audit Project successfully started!")
 
 
     rewriteConfiguration(configuration,folder)
