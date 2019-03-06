@@ -1,8 +1,22 @@
 from random import shuffle
 
-# make letters list [32(SPACE),126(~)]
+"Map below letters (in decimal ascii code, included greek letters)"
+
+"""
+    32, 40, 41, 45, 47, 48-57, 65-90, 91, 93, 95, 97-122, 123, 125
+
+    128-175, 224-240, 244-245
+
+    65-90 : KEFALAIA
+    97-122: PEZA
+
+"""
+
+# make letters list [65,90],[97,122]
 letters1 = []
-for i in range(32,127):
+for i in range(65,90):
+    letters1.append(chr(i))
+for i in range(97,122):
     letters1.append(chr(i))
 
 # keep initial
