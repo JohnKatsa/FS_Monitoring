@@ -24,8 +24,6 @@ def readConfiguration(configuration):
     folder = content.split("\n")[1]
     folder = folder.split(":")[1]
 
-    print(first_time,folder)
-
     file.close()
 
     return first_time, folder
