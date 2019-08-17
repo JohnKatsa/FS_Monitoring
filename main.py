@@ -96,6 +96,7 @@ def main():
     # set configuration file name
     configuration = "configuration"
     iterator = "iterator"
+    subprocess.run(['rm', 'checkfile.txt'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     
     #configure audit
     configureAudit()

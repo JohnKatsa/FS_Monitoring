@@ -1,7 +1,22 @@
 from anonymize import *
 
+"""function to determine date of log record"""
+def get_record_date(date):
+    readable_date = ""
+    flag = False
+    for letter in date:
+        if letter == "(":
+            flag = True
+        elif letter == ".":
+            flag = False
+        elif flag:
+            readable_date += letter
+    return readable_date
+
 """function to determine read/write arguments"""
 def read_write_args(data,sys_id,fh_to_fn_and_p,filesMap,fileNameOut):
+    date = ""
+    flag = False
     for token in data:
         if "pid=" in token:
             pid = token.split("=")[1]  # take second arg (collision with ppid, but pid is second so it keeps correct value)
@@ -9,6 +24,13 @@ def read_write_args(data,sys_id,fh_to_fn_and_p,filesMap,fileNameOut):
             fh = token.split("=")[1]
         elif "exit=" in token:
             bytes_num = token.split("=")[1]
+        elif "msg=" in token:
+            date = token.split("=")[1]
+            flag = True
+        elif flag:
+            date += " " + token
+            date = get_record_date(date)
+            flag = False
 
     pid = int(pid)              # this is the process id
     fh = int(fh,16)             # this is the file descriptor
@@ -23,17 +45,19 @@ def read_write_args(data,sys_id,fh_to_fn_and_p,filesMap,fileNameOut):
 
         f = open(fileNameOut,"a+")
         if sys_id == 0: # read
-            print("READ\t", name, "\t", pos, "\t", bytes_num, pid, file=f)
+            print(date, "\t", "READ\t", name, "\t", pos, "\t", bytes_num, "\t", pid, file=f)
         elif sys_id == 1:   # write
-            print("WRITE\t", name, "\t", pos, "\t", bytes_num, pid, file=f)
+            print(date, "\t", "WRITE\t", name, "\t", pos, "\t", bytes_num, "\t", pid, file=f)
         f.close()
 
 """function to determine open arguments"""
 def open_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
+    date = ""
     name = ""
     flag = 1
     flags = ""
     fh = 0
+    dateflag = False
     for token in data:
         if "pid=" in token:
             pid = token.split("=")[1]  # take second arg (collision with ppid, but pid is second so it keeps correct value)
@@ -42,12 +66,19 @@ def open_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
             flag = 0
         elif "name=" in token:
             f = open(fileNameOut,"a+")
-            print("OPENDIR \t", anonymize(token.split("=")[1]), file=f)
+            print(date + "\t" + "OPENDIR \t" + anonymize(token.split("=")[1]), file=f)
             f.close()
         elif "exit=" in token:
             fh = token.split("=")[1]
         elif "a1=" in token:
             flags = token.split("=")[1]
+        elif "msg=" in token:
+            date = token.split("=")[1]
+            dateflag = True
+        elif dateflag:
+            date += " " + token
+            date = get_record_date(date)
+            dateflag = False
 
     # anonymize file name
     anonymizedName = anonymize(name)    # anonymize name to store
@@ -67,16 +98,25 @@ def open_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
         fh_to_fn_and_p[(pid,fh)] = [anonymizedName,0]
 
     f = open(fileNameOut,"a+")
-    print ("OPEN\t", anonymizedName, pid, fh, file=f)
+    print (date, "\t", "OPEN", "\t", anonymizedName, "\t", pid, "\t", fh, file=f)
     f.close()
 
 """function to determine close arguments"""
 def close_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
+    date = ""
+    flag = False
     for token in data:
         if "pid=" in token:
             pid = token.split("=")[1]  # take second arg (collision with ppid, but pid is second so it keeps correct value)
         elif "a0=" in token:
             fh = token.split("=")[1]
+        elif "msg=" in token:
+            date = token.split("=")[1]
+            flag = True
+        elif flag:
+            date += " " + token
+            date = get_record_date(date)
+            flag = False
 
     pid = int(pid)      # process id
     fh = int(fh,16)     # file descriptor   
@@ -88,11 +128,13 @@ def close_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
         del fh_to_fn_and_p[(pid,fh)]
 
         f = open(fileNameOut,"a+")
-        print("CLOSE\t", name, file=f)
+        print(date, "\t", "CLOSE", "\t", name, file=f)
         f.close()
 
 """function to determine lseek arguments"""
 def lseek_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
+    date = ""
+    flag = False
     for token in data:
         if "pid=" in token:
             pid = token.split("=")[1]  # take second arg (collision with ppid, but pid is second so it keeps correct value)
@@ -102,6 +144,13 @@ def lseek_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
             offset = token.split("=")[1]
         elif "a2=" in token:
             flags = token.split("=")[1]
+        elif "msg=" in token:
+            date = token.split("=")[1]
+            flag = True
+        elif flag:
+            date += " " + token
+            date = get_record_date(date)
+            flag = False
 
     pid = int(pid)              # process id
     fh = int(fh,16)             # file descriptor
@@ -113,16 +162,18 @@ def lseek_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
         if "SEEK_SET" in flags:
             [name, pos] = fh_to_fn_and_p[(pid,fh)]
             fh_to_fn_and_p[(pid,fh)] = [name,offset]
-            print("LSEEK \t", pid, fh, name, offset, file=f)
+            print(date, "\t", "LSEEK", "\t", pid, "\t", fh, "\t", name, "\t", offset, file=f)
         # SEEK_CUR set position from current position
         elif "SEEK_CUR" in flags:
             [name, pos] = fh_to_fn_and_p[(pid,fh)]
             fh_to_fn_and_p[(pid,fh)] = [name,pos+offset]
-            print("LSEEK \t", pid, fh, name, pos+offset, file=f)
+            print(date, "\t", "LSEEK", "\t", pid, "\t", fh, "\t", name, "\t", pos+offset, file=f)
     f.close()
 
 """function to determine dup/dup2/dup3 arguments"""
 def dup_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
+    date = ""
+    flag = False
     for token in data:
         if "pid=" in token:
             pid = token.split("=")[1]  # take second arg (collision with ppid, but pid is second so it keeps correct value)
@@ -130,6 +181,13 @@ def dup_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
             oldfh = token.split("=")[1]
         elif "exit=" in token:
             newfh = token.split("=")[1]
+        elif "msg=" in token:
+            date = token.split("=")[1]
+            flag = True
+        elif flag:
+            date += " " + token
+            date = get_record_date(date)
+            flag = False
 
     pid = int(pid)          # process id 
     oldfh = int(oldfh,16)   # old file descriptor
@@ -141,16 +199,25 @@ def dup_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
         fh_to_fn_and_p[(pid,newfh)] = fh_to_fn_and_p.get((pid,oldfh))
 
         f = open(fileNameOut,"a+")
-        print("DUP\t", "old fd = ", oldfh, "\t new fd = ", newfh, file=f)
+        print(date, "\t", "DUP", "\t", oldfh, "\t", newfh, file=f)
         f.close()
 
 """function to determine fork/clone/vfork arguments"""
 def fork_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
+    date = ""
+    flag = False
     for token in data:
         if "pid=" in token:
             ppid = token.split("=")[1]
         elif "exit=" in token:
             pid = token.split("=")[1]
+        elif "msg=" in token:
+            date = token.split("=")[1]
+            flag = True
+        elif flag:
+            date += " " + token
+            date = get_record_date(date)
+            flag = False
 
     pid = int(pid)      # process id
     ppid = int(ppid)    # parent process id
@@ -163,11 +230,13 @@ def fork_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
     fh_to_fn_and_p.update(tmp_dict)
 
     f = open(fileNameOut,"a+")
-    print("FORK \t", "parent = ", ppid, "\t child = ", pid, file=f)
+    print(date, "\t", "FORK \t", ppid, "\t", pid, file=f)
     f.close()
 
 """function to determine pread/pwrite arguments"""
 def pread_pwrite_args(data,sys_id,fh_to_fn_and_p,filesMap,fileNameOut):
+    date = ""
+    flag = False
     for token in data:
         if "pid=" in token:
             pid = token.split("=")[1]  # take second arg (collision with ppid, but pid is second so it keeps correct value)
@@ -177,6 +246,13 @@ def pread_pwrite_args(data,sys_id,fh_to_fn_and_p,filesMap,fileNameOut):
             bytes_num = token.split("=")[1]
         elif "a3=" in token:
             pos = token.split("=")[1]
+        elif "msg=" in token:
+            date = token.split("=")[1]
+            flag = True
+        elif flag:
+            date += " " + token
+            date = get_record_date(date)
+            flag = False
 
     pid = int(pid)                  # process id
     fh = int(fh,16)                 # file descriptor
@@ -191,7 +267,7 @@ def pread_pwrite_args(data,sys_id,fh_to_fn_and_p,filesMap,fileNameOut):
 
         f = open(fileNameOut,"a+")
         if sys_id == 0: # read
-            print ("PREAD\t", name, "\t", pos, "\t", bytes_num, pid, file=f)
+            print(date, "\t", "PREAD", "\t", name, "\t", pos, "\t", bytes_num, "\t", pid, file=f)
         elif sys_id == 1:   # write
-            print ("PWRITE\t", name, "\t", pos, "\t", bytes_num, pid, file=f)
+            print(date, "\t", "PWRITE", "\t", name, "\t", pos, "\t", bytes_num, "\t", pid, file=f)
         f.close()

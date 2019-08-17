@@ -38,7 +38,7 @@ def parse(fileName,fileNameOut,filesMap,fh_to_fn_and_p):
     record = ""
 
     #fh_to_fn_and_p = {} # list with a pid, a file handler, a file name and a file pointer
-    #print ("OPERATION \t FILENAME \t POSITION \t PROCESS_ID")
+    #print ("DATE \t OPERATION \t FILENAME \t POSITION \t PROCESS_ID")
 
     with open (fileName, "r") as myfile:
         for line in myfile:
