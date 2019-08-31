@@ -7,8 +7,10 @@ Statistics that are calculated:
 - Average depth of file path.
 - Number of file accesses during a day period.
 - Percent of read only files. (e.g. never edited, only read for a time period
-- 
+- Number of files replicated to cloud
 
 
 Every statistic is measured between a startDay and an endDay.
-Also, it is stored in its file, inside stats directory
+Also, it is stored in its file, inside stats directory.
+
+Every information needed is stored in statsconfig.json and can be changed from there
