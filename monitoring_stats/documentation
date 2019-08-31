@@ -14,3 +14,5 @@ Every statistic is measured between a startDay and an endDay.
 Also, it is stored in its file, inside stats directory.
 
 Every information needed is stored in statsconfig.json and can be changed from there
+
+You can run the project by typing: python3 statsCalculator.py (inside the project of course)
