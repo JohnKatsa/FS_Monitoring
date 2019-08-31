@@ -1,0 +1,14 @@
+Statistics that are calculated:
+
+- File system usage of opening a file (read or write)
+- Time of day that contributes the most in file system traffic in hour classes (e.g. 11.00-13.00) 
+- Size (in bytes) of read/write operations
+- Hot (used frequently) vs cold percentage of files.
+- Average depth of file path.
+- Number of file accesses during a day period.
+- Percent of read only files. (e.g. never edited, only read for a time period
+- 
+
+
+Every statistic is measured between a startDay and an endDay.
+Also, it is stored in its file, inside stats directory
