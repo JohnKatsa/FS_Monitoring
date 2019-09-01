@@ -186,7 +186,7 @@ class statsCalculator:
     # returns number
     def numberOfFilesReplicatedToCloud(self, cloudNames, startDay=None, endDay=None):
 
-        mapOfCloudNamesAndNumberOfFilesInCloud = {k : 0 for k in cloudNames}
+        mapOfCloudNamesAndNumberOfFilesInCloud = {anonymize.anonymize(k) : 0 for k in cloudNames}
 
         for record in self.recordsList:
             if not supportLib.isDateInside(startDay=startDay, endDay=endDay, day=record.getDate()):
@@ -198,7 +198,7 @@ class statsCalculator:
                         cloud = pathInList[1]
                         mapOfCloudNamesAndNumberOfFilesInCloud[cloud] = mapOfCloudNamesAndNumberOfFilesInCloud[cloud] + 1 if mapOfCloudNamesAndNumberOfFilesInCloud.get(cloud) else 1
 
-        return mapOfCloudNamesAndNumberOfFilesInCloud
+        return {anonymize.deanonymize(k) : v for k, v in mapOfCloudNamesAndNumberOfFilesInCloud.items()}
 
 # merges 2 dictionaries, if one key exists in both 
 # dictionaries, we add the values
