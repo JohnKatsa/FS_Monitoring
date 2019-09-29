@@ -8,11 +8,24 @@ Statistics that are calculated:
 - Number of file accesses during a day period.
 - Percent of read only files. (e.g. never edited, only read for a time period
 - Number of files replicated to cloud
+- Average Number of open operations per directory
 
 
 Every statistic is measured between a startDay and an endDay.
 Also, it is stored in its file, inside stats directory.
 
-Every information needed is stored in statsconfig.json and can be changed from there
+Every information needed is stored in statsconfig.json and can be changed from there:
+	"directory" : input directory (it can be given also as a command line argument),
+    "startDay" :  start day of calculations in "yyyy-mm-dd" format, 
+    "endDay"   : end day of calculations in "yyyy-mm-dd" format, 
+    "outFolder" : folder where statistic files are stored,
+    "HotVsColdFilesPercentage" : {
+        "limit" : number which separates the cold and hot files ( > limit --> hot,  <= limit = cold)
+    },
+    "cloudNames" : list of anonynmized cloud names //["anonymized_cloud_1", "anonymized_cloud_1", ..]
 
-You can run the project by typing: python3 statsCalculator.py (inside the project of course)
+
+
+You can run the project by typing: python3 statsCalculator.py -d <inputDirectory> (inside the project of course)
+
+	- Optionally give input directory where the parsed audit logs are stored
