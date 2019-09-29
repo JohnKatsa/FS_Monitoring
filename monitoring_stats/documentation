@@ -20,7 +20,7 @@ Every information needed is stored in statsconfig.json and can be changed from t
     "endDay"   : end day of calculations in "yyyy-mm-dd" format, 
     "outFolder" : folder where statistic files are stored,
     "HotVsColdFilesPercentage" : {
-        "limit" : number which separates the cold and hot files ( > limit --> hot,  <= limit = cold)
+        "limit" : number which separates the cold and hot files ( > limit --> hot,  <= limit --> cold)
     },
     "cloudNames" : list of anonynmized cloud names //["anonymized_cloud_1", "anonymized_cloud_1", ..]
 
