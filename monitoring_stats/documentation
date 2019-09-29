@@ -9,6 +9,7 @@ Statistics that are calculated:
 - Percent of read only files. (e.g. never edited, only read for a time period
 - Number of files replicated to cloud
 - Average Number of open operations per directory
+- Number of directories per Cloud (included in file NumberOfReplicatedToCloud)
 
 
 Every statistic is measured between a startDay and an endDay.
