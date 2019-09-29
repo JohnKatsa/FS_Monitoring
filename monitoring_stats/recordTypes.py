@@ -25,6 +25,9 @@ class record:
     def isWrite(self):
         return False
     
+    def isOpen(self):
+        return False
+    
     def getDate(self):
         return self.date
 
@@ -102,6 +105,9 @@ class openRecord(record):
 
     def getFileName(self):
         return self.fileName
+
+    def isOpen(self):
+        return True
 
 class closeRecord(record):
 

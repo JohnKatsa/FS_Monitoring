@@ -1,10 +1,12 @@
 from recordTypes import *
 import supportLib
-import anonymize
 import operator
-import sys
+import sys, getopt
 import os
 import json
+import collections
+
+avgFileOpenedPerDirectory = {}
 
 class statsCalculator:
 
@@ -56,7 +58,7 @@ class statsCalculator:
 
                 self.recordsList.append(rec)
 
-            print("Size in memory: ", sys.getsizeof(self.recordsList))
+            #print("Size in memory: ", sys.getsizeof(self.recordsList))
 		 
     # . File system usage of opening a file (read or write)
     # returns a dictionary that contains the read and write numbers
@@ -172,6 +174,12 @@ class statsCalculator:
         for record in self.recordsList:
             if not supportLib.isDateInside(startDay=startDay, endDay=endDay, day=record.getDate()):
                 continue
+
+            # also here calculates average of file opened per directory
+            if record.isOpen():
+                fName = record.getFileName()
+                avgFileOpenedPerDirectory[fName] = avgFileOpenedPerDirectory[fName] + 1 if avgFileOpenedPerDirectory.get(fName) else 1
+
             if record.isEditFile():
                 editedFiles.add(record.getFileName())
             else:
@@ -186,7 +194,9 @@ class statsCalculator:
     # returns number
     def numberOfFilesReplicatedToCloud(self, cloudNames, startDay=None, endDay=None):
 
-        mapOfCloudNamesAndNumberOfFilesInCloud = {anonymize.anonymize(k) : 0 for k in cloudNames}
+        mapOfCloudNamesAndNumberOfFilesInCloud = {k : {' '} for k in cloudNames}
+        for sets in mapOfCloudNamesAndNumberOfFilesInCloud.values():
+            sets.remove(' ')
 
         for record in self.recordsList:
             if not supportLib.isDateInside(startDay=startDay, endDay=endDay, day=record.getDate()):
@@ -196,9 +206,10 @@ class statsCalculator:
                 if len(pathInList) >= 2:
                     if pathInList[1] in cloudNames:
                         cloud = pathInList[1]
-                        mapOfCloudNamesAndNumberOfFilesInCloud[cloud] = mapOfCloudNamesAndNumberOfFilesInCloud[cloud] + 1 if mapOfCloudNamesAndNumberOfFilesInCloud.get(cloud) else 1
+                        mapOfCloudNamesAndNumberOfFilesInCloud[cloud].add(record.getFileName())
 
-        return {anonymize.deanonymize(k) : v for k, v in mapOfCloudNamesAndNumberOfFilesInCloud.items()}
+        print(mapOfCloudNamesAndNumberOfFilesInCloud)
+        return {k : v for k, v in mapOfCloudNamesAndNumberOfFilesInCloud.items()}
 
 # merges 2 dictionaries, if one key exists in both 
 # dictionaries, we add the values
@@ -230,6 +241,20 @@ def set_merge(setA1, setA2, setB1 , setB2):
     setA1 = setA1 - setB1
 
     return [setA1, setB1]
+
+def dictionary_with_sets_merge(dictA, dictB):
+    dict = {}
+    set = {"dummy data"}
+
+    for key, setA in dictA.items():
+        if dictB.get(key):
+            setA.update(dictB.get(key))
+        dict[key] = setA
+
+    for key, value in dictB.items():
+        dict[key] = value
+
+    return dict
 
 def add_ints_for_median(sumA,sumB,countA,countB):
     return sumA+sumB, countA+countB
@@ -275,9 +300,23 @@ def printFileUsage(readsWritesDict, outDirectory="stats/"):
     print("Number of reads: " + str(readsWritesDict["reads"]) + "\nNumber of writes: " + str(readsWritesDict["writes"]), file=open(outDirectory + "FileUsage", "w+"))
 
 def printSizeOfReadWrite(var_sizeOfReadWrite, outDirectory="stats/"):
+    
+    dictRead = var_sizeOfReadWrite[0]
+    dictWrite = var_sizeOfReadWrite[1]
+    dictRead = sorted(dictRead.items(), key=lambda x: int(x[0]))
+    dictWrite = sorted(dictWrite.items(), key=lambda x: int(x[0]))
+
     print("File Size \t Bytes Read", file=open(outDirectory + "SizeOfReadWrite", "w+"))
-    for fileSize, readSize in var_sizeOfReadWrite[0].items():
+    for x in dictRead:
+        fileSize = x[0]
+        readSize = x[1]
         print(str(fileSize) + " \t " + str(readSize), file=open(outDirectory + "SizeOfReadWrite", "a"))
+
+    print("\n\n\nFile Size \t Bytes Written", file=open(outDirectory + "SizeOfReadWrite", "a"))
+    for x in dictWrite:
+        fileSize = x[0]
+        writeSize = x[1]
+        print(str(fileSize) + " \t " + str(writeSize), file=open(outDirectory + "SizeOfReadWrite", "a"))
 
 def printTimeOfDayTraffics(var_timeOfDayTraffics, outDirectory="stats/"):
     # for printing purposes
@@ -291,11 +330,30 @@ def printTimeOfDayTraffics(var_timeOfDayTraffics, outDirectory="stats/"):
         print("In time " + time + "-" + str(int(time)+2) + ", there were " + str(num) + " operations.", file=open(outDirectory + "TimeOfDayTraffics", "a"))
 
 def printNumberOfFilesReplicatedToCloud(var_numberOfFilesReplicatedToCloud, outDirectory="stats/"):
+    # Count number of directories in cloud
+    dirs = {}
+    for cloud in var_numberOfFilesReplicatedToCloud:
+        count = 0
+        for potentialFolder in list(var_numberOfFilesReplicatedToCloud.get(cloud)):
+            if potentialFolder.endswith('/'):
+                count += 1 
+        dirs[cloud] = count
+    
     print("Number of files replicated to cloud:", file=open(outDirectory + "NumberOfFilesReplicatedToCloud", "w+"))
-    for cloudName, number in var_numberOfFilesReplicatedToCloud.items():
-        print("\tCloud Name = " + cloudName + ", number of files = " + str(number), file=open(outDirectory + "NumberOfFilesReplicatedToCloud", "a"))    
+    for cloudName, files in var_numberOfFilesReplicatedToCloud.items():
+        print("\tCloud Name = " + cloudName + ", number of files = " + str(len(files)) + ", number of directories = " + str(dirs[cloudName]), file=open(outDirectory + "NumberOfFilesReplicatedToCloud", "a"))    
 
-if __name__ == "__main__":
+def printAvgFileOpenedPerDirectory(outDirectory="stats/"):
+    sumOfOpens = 0
+    sumOfDirectories = 0
+
+    for directory, number in avgFileOpenedPerDirectory.items():
+        sumOfOpens += number
+        sumOfDirectories += 1
+
+    print("Average number of file open operations per directory: " + str('%.2f' % (sumOfOpens/sumOfDirectories)), file=open(outDirectory + "AverageFileOpenedPerDirectory", "w+"))
+
+def main(argv):
     configuration = supportLib.parseConfigurationFile('statsconfig.json')
     startDay = configuration["startDay"]
     endDay = configuration["endDay"]
@@ -305,6 +363,15 @@ if __name__ == "__main__":
     cloudNames = configuration["cloudNames"]
     if not os.path.isdir(outputFolder):
         os.makedirs(outputFolder)
+
+    try:
+        opts, args = getopt.getopt(argv,"d:")
+        for opt, arg in opts:
+            if opt == '-d':
+                directory = arg
+    except getopt.GetoptError:
+        pass
+    print("directory = " + directory)
 
     var = statsCalculator()
 
@@ -370,10 +437,10 @@ if __name__ == "__main__":
             ##############
 
             #
-            var_numberOfFilesReplicatedToCloud = dictionary_merge(var_numberOfFilesReplicatedToCloud, var.numberOfFilesReplicatedToCloud(cloudNames=cloudNames, startDay=startDay, endDay=endDay))
+            var_numberOfFilesReplicatedToCloud = dictionary_with_sets_merge(var_numberOfFilesReplicatedToCloud, var.numberOfFilesReplicatedToCloud(cloudNames=cloudNames, startDay=startDay, endDay=endDay))
             ##############
 
-    printHotVsColdFilesPercentage(var_hotVsColdFilesPercentage, 2)
+    printHotVsColdFilesPercentage(var_hotVsColdFilesPercentage, HotVsColdFilesPercentageLimit)
     printNumOfFileAccessInDay(var_numOfFileAccessInDay, startDay=startDay, endDay=endDay)
     printPercentOfReadOnlyFiles(var_percentOfReadOnlyFiles)
     printAvgDepthOfFPath(var_avgDepthOfFPath)
@@ -381,4 +448,7 @@ if __name__ == "__main__":
     printSizeOfReadWrite(var_sizeOfReadWrite)
     printTimeOfDayTraffics(var_timeOfDayTraffics)
     printNumberOfFilesReplicatedToCloud(var_numberOfFilesReplicatedToCloud)
+    printAvgFileOpenedPerDirectory()
     
+if __name__ == "__main__":
+    main(sys.argv[1:])

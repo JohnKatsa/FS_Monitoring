@@ -1,10 +1,10 @@
 {
     "directory" : "./18dbf2079c3d/",
     "startDay" : "2000-08-09", 
-    "endDay"   : "2009-08-09",
+    "endDay"   : "2019-08-09",
     "outFolder" : "stats/",
     "HotVsColdFilesPercentage" : {
-        "limit" : 2
+        "limit" : 100
     },
-    "cloudNames" : ["Dropbox", "uju"]
+    "cloudNames" : ["Dropbox", "uju", "ogy"]
 }
