@@ -1,32 +1,54 @@
 Statistics that are calculated:
 
-- File system usage of opening a file (read or write)
-- Time of day that contributes the most in file system traffic in hour classes (e.g. 11.00-13.00) 
-- Size (in bytes) of read/write operations
-- Hot (used frequently) vs cold percentage of files.
-- Average depth of file path.
-- Number of file accesses during a day period.
-- Percent of read only files. (e.g. never edited, only read for a time period
-- Number of files replicated to cloud
-- Average Number of open operations per directory
-- Number of directories per Cloud (included in file NumberOfReplicatedToCloud)
+- File system usage of opening a file (read or write):
+	What is the cause of opening a file in the file system.
 
+- Time of day that contributes the most in file system traffic in hour classes (e.g. 11.00-13.00): 
+	The time of day in which the most files/directories are accessed/written/read.
+	
+- Size (in bytes) of read/write operations:
+	The amount of bytes that are read/written in comparison to the size of the file.
 
+- Hot (used frequently) vs cold percentage of files:
+	The percentage of files that are accessed more times than the declared "limit" (hot), or less times (cold).
+
+- Average depth of file path:
+	The average path to a file access.
+
+- Number of file accesses during a day period:
+	The number that a file was accessed in a calendar day.
+
+- Percent of read only files. (e.g. never edited, only read for a time period):
+	The percentage of the files that were opened and only read within time period.
+
+- Number of files replicated to cloud:
+	The number of files that are opened in a cloud directory.
+
+- Average Number of open operations per directory:
+	The number of open operations for all accessed directories. 
+
+- Number of directories per Cloud (included in file NumberOfReplicatedToCloud):
+	Number of directories that are accessed in a cloud directory.
+
+***
 Every statistic is measured between a startDay and an endDay.
 Also, it is stored in its file, inside stats directory.
+***
+
 
 Every information needed is stored in statsconfig.json and can be changed from there:
-	"directory" : input directory (it can be given also as a command line argument),
-    "startDay" :  start day of calculations in "yyyy-mm-dd" format, 
-    "endDay"   : end day of calculations in "yyyy-mm-dd" format, 
-    "outFolder" : folder where statistic files are stored,
+	"directory" : directory which contains the audit-parsed logs of the monitoring system (it can be given also as a command line argument),
+    "startDay" : start day of statistic measurements in "yyyy-mm-dd" format, 
+    "endDay"   : end day of statistic measurements in "yyyy-mm-dd" format, 
+    "outFolder" : folder where the statistical reports are stored,
     "HotVsColdFilesPercentage" : {
-        "limit" : number which separates the cold and hot files ( > limit --> hot,  <= limit --> cold)
+        "limit" : the number of accesses of files, that determines an accessed file to hot or cold. 
+        (e.g. limit = 2, fileA_accesses = 3, fileB_accesses = 1 => hot: fileA, cold: fileB) 
     },
-    "cloudNames" : list of anonynmized cloud names //["anonymized_cloud_1", "anonymized_cloud_1", ..]
+    "cloudNames" : list of anonymized cloud names where we want to get statistical reports //["anonymized_cloud_name_1", "anonymized_cloud_name_2", ..]
 
 
 
 You can run the project by typing: python3 statsCalculator.py -d <inputDirectory> (inside the project of course)
 
-	- Optionally give input directory where the parsed audit logs are stored
+	- Optionally give input directory, where the parsed audit logs are stored
