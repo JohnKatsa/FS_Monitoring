@@ -12,6 +12,11 @@ import subprocess
 import getpass
 import signal
 
+def signal_handler(sig, frame):
+        subprocess.run(['auditctl', '-D'], stdout=subprocess.PIPE)
+        print('Exiting audit program..')
+        sys.exit(0)
+
 def readConfiguration(configuration):
     file = open(configuration,"r")
     content = file.read()
@@ -31,7 +36,7 @@ def readConfiguration(configuration):
 # first time run system
 def assignFolder(configuration):
     # make explicit folder name in server (mac address)
-    result = os.popen("ifconfig -a | grep -Po 'HWaddr \K.*$'").read()
+    result = os.popen("ip link | grep ether | awk '{print $2}'").read()
     result = result.split("\n")[0]      # name of folder is its unique mac-address
     result = result.replace(':','')     # remove ':'
     folder = "./" + result
@@ -92,10 +97,20 @@ def rsyncLogs(folder):
 
 
 def main():
+    
+    # catch SIGINT
+    signal.signal(signal.SIGINT, signal_handler)
+
+    # start audit daemon
+    runAuditd = subprocess.run(['service', 'auditd', 'start'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    if runAuditd.returncode != 0:
+        print("Cannot start audit daemon. Please run manually \'sudo service auditd start\'")
+        return -1
 
     # set configuration file name
     configuration = "configuration"
     iterator = "iterator"
+    subprocess.run(['rm', 'checkfile.txt'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     
     #configure audit
     configureAudit()
