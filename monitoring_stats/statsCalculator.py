@@ -23,40 +23,45 @@ class statsCalculator:
             
             for line in myfile:
                 
-                """
-                For the stats, all the file names will be without space
-                """
-                lineTokens = line.split("\t")
-                for i in range(len(lineTokens)):
-                    lineTokens[i] = re.sub(' ','',lineTokens[i])
+                try:
+                    """
+                    For the stats, all the file names will be without space
+                    """
+                    lineTokens = line.split("\t")
+                    #print(lineTokens)
+                    for i in range(len(lineTokens)):
+                        lineTokens[i] = re.sub(' ','',lineTokens[i])
 
-                # dummy record initializer
-                rec = record(lineTokens[0])
-                syscallType = lineTokens[1]
-                lineTokens.remove(lineTokens[1])
+                    # dummy record initializer
+                    rec = record(lineTokens[0])
+                    syscallType = lineTokens[1]
+                    lineTokens.remove(lineTokens[1])
+                    #print(lineTokens)
 
-                if syscallType == "READ":
-                    rec = readRecord(*lineTokens)
-                elif syscallType == "WRITE":
-                    rec = writeRecord(*lineTokens)
-                elif syscallType == "OPENDIR":
-                    rec = openDirRecord(*lineTokens)
-                elif syscallType == "OPEN":
-                    rec = openRecord(*lineTokens)
-                elif syscallType == "CLOSE":
-                    rec = closeRecord(*lineTokens)
-                elif syscallType == "LSEEK":
-                    rec = lseekRecord(*lineTokens)
-                elif syscallType == "DUP":
-                    rec = dupRecord(*lineTokens)
-                elif syscallType == "FORK":
-                    rec = forkRecord(*lineTokens)
-                elif syscallType == "PREAD":
-                    rec = preadRecord(*lineTokens)
-                elif syscallType == "PWRITE":
-                    rec = pwriteRecord(*lineTokens)
+                    if syscallType == "READ":
+                        rec = readRecord(*lineTokens)
+                    elif syscallType == "WRITE":
+                        rec = writeRecord(*lineTokens)
+                    elif syscallType == "OPENDIR":
+                        rec = openDirRecord(*lineTokens)
+                    elif syscallType == "OPEN":
+                        rec = openRecord(*lineTokens)
+                    elif syscallType == "CLOSE":
+                        rec = closeRecord(*lineTokens)
+                    elif syscallType == "LSEEK":
+                        rec = lseekRecord(*lineTokens)
+                    elif syscallType == "DUP":
+                        rec = dupRecord(*lineTokens)
+                    elif syscallType == "FORK":
+                        rec = forkRecord(*lineTokens)
+                    elif syscallType == "PREAD":
+                        rec = preadRecord(*lineTokens)
+                    elif syscallType == "PWRITE":
+                        rec = pwriteRecord(*lineTokens)
 
-                self.recordsList.append(rec)
+                    self.recordsList.append(rec)
+                except:
+                    pass
 
             #print("Size in memory: ", sys.getsizeof(self.recordsList))
 		 
@@ -208,7 +213,7 @@ class statsCalculator:
                         cloud = pathInList[1]
                         mapOfCloudNamesAndNumberOfFilesInCloud[cloud].add(record.getFileName())
 
-        print(mapOfCloudNamesAndNumberOfFilesInCloud)
+        #print(mapOfCloudNamesAndNumberOfFilesInCloud)
         return {k : v for k, v in mapOfCloudNamesAndNumberOfFilesInCloud.items()}
 
 # merges 2 dictionaries, if one key exists in both 
@@ -283,10 +288,10 @@ def printNumOfFileAccessInDay(var_numOfFileAccessInDay, startDay=None, endDay=No
 
     print(file=open(outDirectory + "NumOfFileAccessInDay", "w+"))
     for day, accesses in requestedDaysDict.items():
-        print("On " + day + " happened " + str(accesses) + " file accesses.", file=open(outDirectory + "NumOfFileAccessInDay", "w+"))
+        print("On " + day + " happened " + str(accesses) + " file accesses.", file=open(outDirectory + "NumOfFileAccessInDay", "a"))
 
 def printPercentOfReadOnlyFiles(var_percentOfReadOnlyFiles, outDirectory="stats/"):
-    print("Read only file percentage: " + str('%.3f' % (len(var_percentOfReadOnlyFiles[0])/(len(var_percentOfReadOnlyFiles[1]) if len(var_percentOfReadOnlyFiles[1]) > 0 else 1  + len(var_percentOfReadOnlyFiles[0]) if len(var_percentOfReadOnlyFiles[0]) > 0 else 1))), file=open(outDirectory + "PercentOfReadOnlyFiles", "w+"))
+    print("Read only file percentage: " + str('%.3f' % (len(var_percentOfReadOnlyFiles[0])/(len(var_percentOfReadOnlyFiles[1]) + len(var_percentOfReadOnlyFiles[0]))) if (len(var_percentOfReadOnlyFiles[1]) + len(var_percentOfReadOnlyFiles[0])) > 0 else 0), file=open(outDirectory + "PercentOfReadOnlyFiles", "w+"))
 
 def printAvgDepthOfFPath(l, outDirectory="stats/"):
     sum = l[0]
@@ -371,7 +376,6 @@ def main(argv):
                 directory = arg
     except getopt.GetoptError:
         pass
-    print("directory = " + directory)
 
     var = statsCalculator()
 
@@ -390,11 +394,10 @@ def main(argv):
     var_sizeOfReadWrite = [{}, {}]    # list of 2 dictionaries
     var_timeOfDayTraffics = {}
     var_numberOfFilesReplicatedToCloud = {}
-
-    directory = configuration["directory"]
     
     # calculate forearch file
-    for filename in os.listdir(directory):
+    for filename in sorted(os.listdir(directory), key=lambda x: int(x.replace("log","").replace(".",""))):
+        print('file = ' + filename)
         if filename.endswith(".log"):
             var.parseLogFile(directory+filename)
             
@@ -451,4 +454,5 @@ def main(argv):
     printAvgFileOpenedPerDirectory()
     
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    if len(sys.argv) > 0:
+        main(sys.argv[1:])

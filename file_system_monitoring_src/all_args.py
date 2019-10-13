@@ -98,7 +98,7 @@ def open_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
         fh_to_fn_and_p[(pid,fh)] = [anonymizedName,0]
 
     f = open(fileNameOut,"a+")
-    print (date + "\t" + "OPEN\t", anonymizedName, pid, fh, file=f)
+    print (date + "\t" + "OPEN\t" + anonymizedName, "\t", pid, "\t", fh, file=f)
     f.close()
 
 """function to determine close arguments"""
@@ -162,12 +162,12 @@ def lseek_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
         if "SEEK_SET" in flags:
             [name, pos] = fh_to_fn_and_p[(pid,fh)]
             fh_to_fn_and_p[(pid,fh)] = [name,offset]
-            print(date + "\t" + "LSEEK \t", pid, fh, name, offset, file=f)
+            print(date + "\t" + "LSEEK \t", pid, "\t", fh, "\t", name, "\t", offset, file=f)
         # SEEK_CUR set position from current position
         elif "SEEK_CUR" in flags:
             [name, pos] = fh_to_fn_and_p[(pid,fh)]
             fh_to_fn_and_p[(pid,fh)] = [name,pos+offset]
-            print(date + "\t" + "LSEEK \t", pid, fh, name, pos+offset, file=f)
+            print(date + "\t" + "LSEEK \t", pid, "\t", fh, "\t", name, "\t", pos+offset, file=f)
     f.close()
 
 """function to determine dup/dup2/dup3 arguments"""
@@ -267,7 +267,7 @@ def pread_pwrite_args(data,sys_id,fh_to_fn_and_p,filesMap,fileNameOut):
 
         f = open(fileNameOut,"a+")
         if sys_id == 0: # read
-            print(date + "\t" + "PREAD\t", name, "\t", pos, "\t", bytes_num, pid, file=f)
+            print(date + "\t" + "PREAD\t", name, "\t", pos, "\t", bytes_num, "\t", pid, file=f)
         elif sys_id == 1:   # write
-            print(date + "\t" + "PWRITE\t", name, "\t", pos, "\t", bytes_num, pid, file=f)
+            print(date + "\t" + "PWRITE\t", name, "\t", pos, "\t", bytes_num, "\t", pid, file=f)
         f.close()
