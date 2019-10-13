@@ -84,8 +84,8 @@ class statsCalculator:
     # returns a dictionary with key the starting hour and value the number of operations
     def timeOfDayTraffics(self, startDay=None, endDay=None):
 
-        dayOperations_dict = {"0" : 0, "2" : 0, "4" : 0, "6" : 0, "8" : 0, "10" : 0,\
-                              "12" : 0, "14" : 0, "16" : 0, "18" : 0, "20" : 0, "22" : 0}
+        dayOperations_dict = {"2" : 0, "4" : 0, "6" : 0, "8" : 0, "10" : 0, "12" : 0,\
+                               "14" : 0, "16" : 0, "18" : 0, "20" : 0, "22" : 0, "24" : 0}
 
         for record in self.recordsList:
             if not supportLib.isDateInside(startDay=startDay, endDay=endDay, day=record.getDate()):
@@ -311,28 +311,22 @@ def printSizeOfReadWrite(var_sizeOfReadWrite, outDirectory="stats/"):
     dictRead = sorted(dictRead.items(), key=lambda x: int(x[0]))
     dictWrite = sorted(dictWrite.items(), key=lambda x: int(x[0]))
 
-    print("File Size \t Bytes Read", file=open(outDirectory + "SizeOfReadWrite", "w+"))
+    print("File Size \t Bytes Read", file=open(outDirectory + "SizeOfRead", "w+"))
     for x in dictRead:
         fileSize = x[0]
         readSize = x[1]
-        print(str(fileSize) + " \t " + str(readSize), file=open(outDirectory + "SizeOfReadWrite", "a"))
+        print(str(fileSize) + " \t " + str(readSize), file=open(outDirectory + "SizeOfRead", "a"))
 
-    print("\n\n\nFile Size \t Bytes Written", file=open(outDirectory + "SizeOfReadWrite", "a"))
+    print("File Size \t Bytes Written", file=open(outDirectory + "SizeOfWrite", "w+"))
     for x in dictWrite:
         fileSize = x[0]
         writeSize = x[1]
-        print(str(fileSize) + " \t " + str(writeSize), file=open(outDirectory + "SizeOfReadWrite", "a"))
+        print(str(fileSize) + " \t " + str(writeSize), file=open(outDirectory + "SizeOfWrite", "a"))
 
 def printTimeOfDayTraffics(var_timeOfDayTraffics, outDirectory="stats/"):
-    # for printing purposes
-    for time, num in var_timeOfDayTraffics.items():
-        if time in ["2", "4", "6", "8"]:
-            var_timeOfDayTraffics["0"+time] = var_timeOfDayTraffics[time]
-            del var_timeOfDayTraffics[time]
-
     print(file=open(outDirectory + "TimeOfDayTraffics", "w+"))
-    for time, num in sorted(var_timeOfDayTraffics.items()):
-        print("In time " + time + "-" + str(int(time)+2) + ", there were " + str(num) + " operations.", file=open(outDirectory + "TimeOfDayTraffics", "a"))
+    for time, num in sorted(var_timeOfDayTraffics.items(), key=lambda x: int(x[0])):
+        print("In time " + str(int(time)-2) + "-" + time + ", there were " + str(num) + " operations.", file=open(outDirectory + "TimeOfDayTraffics", "a"))
 
 def printNumberOfFilesReplicatedToCloud(var_numberOfFilesReplicatedToCloud, outDirectory="stats/"):
     # Count number of directories in cloud

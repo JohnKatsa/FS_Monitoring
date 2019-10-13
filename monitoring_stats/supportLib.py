@@ -29,10 +29,31 @@ def getSecond(date):
 
 "Returns closest even hour to given date"
 def getClosestEvenHour(date):
-    time = int(getHour(date)) + float(getMinute(date))/60 + float(getSecond(date))/3600
-    l = ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20", "22", "24"]
-    m = min(l, key=lambda x:abs(float(x)-time))
-    return m if m != "24" else "0"
+    hour = int(getHour(date))
+    if hour <= 2:
+        return "2"
+    elif hour <= 4:
+        return "4"
+    elif hour <= 6:
+        return "6"
+    elif hour <= 8:
+        return "8"
+    elif hour <= 10:
+        return "10"
+    elif hour <= 12:
+        return "12"
+    elif hour <= 14:
+        return "14"
+    elif hour <= 16:
+        return "16"
+    elif hour <= 18:
+        return "18"
+    elif hour <= 20:
+        return "20"
+    elif hour <= 22:
+        return "22"
+    elif hour <= 24:
+        return "24"
 
 "Json configuration parser"
 "Returns dictionary"
