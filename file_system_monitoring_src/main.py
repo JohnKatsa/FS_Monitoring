@@ -102,7 +102,7 @@ def main():
     signal.signal(signal.SIGINT, signal_handler)
 
     # start audit daemon
-    runAuditd = subprocess.run(['service', 'auditd', 'start'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    runAuditd = subprocess.run(['systemctl', 'start', 'auditd'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     if runAuditd.returncode != 0:
         print("Cannot start audit daemon. Please run manually \'sudo service auditd start\'")
         return -1
