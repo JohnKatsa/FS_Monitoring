@@ -52,6 +52,10 @@ def read_write_args(data,sys_id,fh_to_fn_and_p,filesMap,fileNameOut):
 
 """function to determine open arguments"""
 def open_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
+    # if seccomp ignore
+    if "SECCOMP" in data:
+        return
+    
     date = ""
     name = ""
     flag = 1

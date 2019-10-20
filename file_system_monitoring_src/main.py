@@ -85,9 +85,9 @@ def configureAudit():
     res = subprocess.run(['auditctl', '-a', 'always,exclude', '-F', 'msgtype=CWD'], stdout=subprocess.PIPE) # exclude unnecessary info
     res = subprocess.run(['auditctl', '-a', 'never,exit', '-F', 'dir='+os.getcwd()], stdout=subprocess.PIPE) # exclude current directory
     if(platform.architecture()[0] == '64bit'):                                                              # determine architecture
-        res = subprocess.run(['auditctl', '-a', 'always,exit', '-F', 'arch=b64', '-F', 'success=1', '-S', 'open,close,read,write,dup,dup2,fork,vfork,clone,lseek,mkdir,rmdir'], stdout=subprocess.PIPE)
+        res = subprocess.run(['auditctl', '-a', 'always,exit', '-F', 'arch=b64', '-F', 'success=1', '-S', 'open,openat,close,read,write,dup,dup2,fork,vfork,clone,lseek,mkdir,rmdir'], stdout=subprocess.PIPE)
     else:
-        res = subprocess.run(['auditctl', '-a', 'always,exit', '-F', 'arch=b32', '-F', 'success=1', '-S', 'open,close,read,write,dup,dup2,fork,vfork,clone,lseek,mkdir,rmdir'], stdout=subprocess.PIPE)
+        res = subprocess.run(['auditctl', '-a', 'always,exit', '-F', 'arch=b32', '-F', 'success=1', '-S', 'open,openat,close,read,write,dup,dup2,fork,vfork,clone,lseek,mkdir,rmdir'], stdout=subprocess.PIPE)
 
 def rsyncLogs(folder):
     res = subprocess.run(["rsync", "--remove-source-files", "-av", "./"+folder+"/", "-e", "ssh", "filemonitor@dsgserver1.di.uoa.gr:/home/filemonitor/storage/"+folder+"/"],stdout=subprocess.PIPE, stderr=subprocess.PIPE)
