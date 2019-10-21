@@ -51,7 +51,7 @@ def read_write_args(data,sys_id,fh_to_fn_and_p,filesMap,fileNameOut):
         f.close()
 
 """function to determine open arguments"""
-def open_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
+def open_args(data,fh_to_fn_and_p,filesMap,fileNameOut,isOpenAt):
     # if seccomp ignore
     if "SECCOMP" in data:
         return
@@ -67,6 +67,14 @@ def open_args(data,fh_to_fn_and_p,filesMap,fileNameOut):
             pid = token.split("=")[1]  # take second arg (collision with ppid, but pid is second so it keeps correct value)
         elif "name=" in token and flag:
             name = token.split("=")[1]
+
+            # in openat case, check for relative path
+            if isOpenAt:
+                if name == None or name[0] != '/':
+                    #relative path
+                    cwd = ''.join(data).split("cwd=")[1].split("type=")[0]
+                    name = cwd + '/' + name
+                
             flag = 0
         elif "name=" in token:
             f = open(fileNameOut,"a+")

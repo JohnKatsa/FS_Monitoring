@@ -82,7 +82,7 @@ def configureAudit():
     res = subprocess.run(['auditctl', '-D'], stdout=subprocess.PIPE)                                        # clear old rules
     res = subprocess.run(['auditctl', '-b', '30000'], stdout=subprocess.PIPE)                               # increase backlog buffer
     res = subprocess.run(['auditctl', '--backlog_wait_time', '0'], stdout=subprocess.PIPE)                  # minimize waiting time
-    res = subprocess.run(['auditctl', '-a', 'always,exclude', '-F', 'msgtype=CWD'], stdout=subprocess.PIPE) # exclude unnecessary info
+    #res = subprocess.run(['auditctl', '-a', 'always,exclude', '-F', 'msgtype=CWD'], stdout=subprocess.PIPE) # exclude unnecessary info
     res = subprocess.run(['auditctl', '-a', 'never,exit', '-F', 'dir='+os.getcwd()], stdout=subprocess.PIPE) # exclude current directory
     if(platform.architecture()[0] == '64bit'):                                                              # determine architecture
         res = subprocess.run(['auditctl', '-a', 'always,exit', '-F', 'arch=b64', '-F', 'success=1', '-S', 'open,openat,close,read,write,dup,dup2,fork,vfork,clone,lseek,mkdir,rmdir'], stdout=subprocess.PIPE)
@@ -97,7 +97,7 @@ def rsyncLogs(folder):
 
 
 def main():
-    
+
     # catch SIGINT
     signal.signal(signal.SIGINT, signal_handler)
 
@@ -111,9 +111,6 @@ def main():
     configuration = "configuration"
     iterator = "iterator"
     subprocess.run(['rm', 'checkfile.txt'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    
-    #configure audit
-    configureAudit()
 
     currMap = {}
 
@@ -134,6 +131,9 @@ def main():
     filesMap = {}
     filesMap = makeFilesMap(os.environ['HOME']+'/')     # get user's file sizes
 
+    #configure audit
+    configureAudit()
+
     # user messages
     print("System prepared.")
     print("The Audit Project successfully started!")
@@ -149,7 +149,7 @@ def main():
 
         # then we sleep until its time to parse and upload
         time.sleep(180)
-            
+
         # ausearch with file
         resultFull = subprocess.run(['ausearch', '--checkpoint', 'checkfile.txt', '-i'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         result = resultFull.stdout.decode('utf-8')

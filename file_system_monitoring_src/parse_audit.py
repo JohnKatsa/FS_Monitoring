@@ -11,8 +11,11 @@ def read_record(data,fh_to_fn_and_p,filesMap,fileNameOut):
         elif "syscall=write" == token:
             read_write_args(data,1,fh_to_fn_and_p,filesMap,fileNameOut)
         # open
-        elif "syscall=open" == token or "syscall=openat" == token:
-            open_args(data,fh_to_fn_and_p,filesMap,fileNameOut)
+        elif "syscall=open" == token:
+            open_args(data,fh_to_fn_and_p,filesMap,fileNameOut,False)
+        # openat
+        elif "syscall=openat" == token:
+            open_args(data,fh_to_fn_and_p,filesMap,fileNameOut,True)
         # close
         elif "syscall=close" == token:
             close_args(data,fh_to_fn_and_p,filesMap,fileNameOut)
